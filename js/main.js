@@ -102,7 +102,7 @@ var white_obj;
 
 //Pop-up stuff
 var pop_up_group = new fabric.Group();
-var pop_up = new String('<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="350px" height="219px" viewBox="0 0 350 219" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M297,0 C305.284271,-1.52179594e-15 312,6.71572875 312,15 L312,156 C312,164.284271 305.284271,171 297,171 L167.533,171 L156.5,183.507812 L145.467,171 L15,171 C6.71572875,171 1.01453063e-15,164.284271 0,156 L0,15 C-1.01453063e-15,6.71572875 6.71572875,1.52179594e-15 15,0 L297,0 Z" id="path-1"></path><filter x="-9.5%" y="-15.0%" width="118.9%" height="132.2%" filterUnits="objectBoundingBox" id="filter-2"><feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur stdDeviation="9.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur><feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite><feColorMatrix values="0 0 0 0 0.253972771   0 0 0 0 0.180293887   0 0 0 0 0.352553216  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix></filter></defs><g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="stack---initial-state" transform="translate(-1017.000000, -319.000000)"><g id="populate_dialog_1" transform="translate(1036.000000, 336.000000)"><g id="Combined-Shape"><use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use><path stroke="#04BBCE" stroke-width="1" d="M156.5,182.751966 L167.307321,170.5 L297,170.5 C305.008129,170.5 311.5,164.008129 311.5,156 L311.5,15 C311.5,6.99187113 305.008129,0.5 297,0.5 L15,0.5 C6.99187113,0.5 0.5,6.99187113 0.5,15 L0.5,156 C0.5,164.008129 6.99187113,170.5 15,170.5 L145.692679,170.5 L156.5,182.751966 Z" stroke-linejoin="square" fill="#412E5A" fill-rule="evenodd"></path></g><rect id="Rectangle" fill="#38274E" x="10" y="37" width="291" height="66" rx="6"></rect></g></g></g></svg>')
+var pop_up = new String('<?xml version="1.0" encoding="UTF-8"?><svg version="1.1" viewBox="0 0 312 153" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="50%" x2="50%" y2="100%"><stop stop-color="#2D9DD7" offset="0"/><stop stop-color="#1E8AC3" offset="1"/></linearGradient></defs><g fill="none" fill-rule="evenodd"><path d="m156.5 151.75 6.3963-7.2519h134.1c8.0081 0 14.5-6.4919 14.5-14.5v-115c0-8.0081-6.4919-14.5-14.5-14.5h-282c-8.0081 0-14.5 6.4919-14.5 14.5v115c0 8.0081 6.4919 14.5 14.5 14.5h135.1l6.3963 7.2519z" fill="#fff" opacity=".95375" stroke="#E6E6E6"/><rect x="100.02" y="101.87" width="107.76" height="32.258" rx="8" fill="url(#a)"/><rect x="100.02" y="101.87" width="107.76" height="32.258" rx="8" fill="url(#a)"/><path d="m139.01 123.19c4.512 0 6.176-1.904 6.176-6.016 0-3.856-1.632-5.728-6.144-5.728h-2.48v11.744h2.448zm0.304-1.696h-0.672v-8.368h0.72c2.672 0 3.68 1.168 3.68 4.128 0 3.168-1.152 4.24-3.728 4.24zm11.04 1.888c2.48 0 4-1.52 4-4.448 0-2.688-1.44-4.144-3.808-4.144-2.256 0-4.064 1.488-4.064 4.304 0 2.736 1.312 4.288 3.872 4.288zm0.08-1.44c-1.392 0-1.888-1.136-1.888-2.864 0-1.696 0.608-2.816 1.92-2.816s1.84 1.072 1.84 2.768c0 1.728-0.544 2.912-1.872 2.912zm7.456 1.248v-4.576c0-1.216 0.384-2.304 1.808-2.304 0.976 0 1.456 0.56 1.456 2.048v4.832h2v-4.992c0-2.384-1.056-3.408-2.816-3.408-1.472 0-2.176 0.768-2.512 1.392h-0.032l-0.08-1.2h-1.824v8.208h2zm10.576 0.192c1.408 0 3.088-0.496 3.456-2.8l-1.68-0.176c-0.176 1.088-0.8 1.504-1.712 1.504-1.392 0-1.856-1.008-1.872-2.416h5.312c0.032-0.304 0.048-0.64 0.048-0.912 0-2.4-1.168-3.792-3.392-3.792-2.528 0-4.016 1.68-4.016 4.384 0 2.416 1.088 4.208 3.856 4.208zm1.616-5.232h-3.408c0.048-1.072 0.592-2.016 1.808-2.016 1.12 0 1.648 0.736 1.6 2.016z" fill="#fff" fill-rule="nonzero"/><rect x="10" y="45" width="291" height="46" rx="4" fill="#F4F4F4" opacity=".72991"/></g></svg>')
 
 var input;
 var active_group;
@@ -111,7 +111,11 @@ var old_highlight_group;
 
 
 //ethic values
-var values = ["Privacy","Participation","Accountability","Autonomy","Placeholder","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Diversity","Placeholder","Ineteroperability","Data Protection","Safety & Security","Wellbeing","Placeholder",]
+var values = ["Privacy","Participation","Accountability","Autonomy","Placeholder","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Diversity","Placeholder","Ineteroperability","Data Protection","Safety & Security","Wellbeing","Placeholder"]
+var problem_values = ["Dignity","Non-discrimination","Autonomy","Responsibility","Accountability","Sustainability","Safety & Security","Openness","Wellbeing","Transparency","Participation","Inclusion & Equality"]
+
+var selected_values = [];
+
 var valuesGroup = new fabric.Group();
 
 /**************************************/
@@ -232,8 +236,16 @@ function generate_tile(tile, circle, group, id, text, isActive) {
                     id: id + "_circle_" + circle_number,
                     fill: '#FFF',
                     isFilled:false,
-                    isValue:false
+                    isValue:false,
+                    opacity: 0,
+                    layer:id
                   });
+
+                  if (isActive) {
+                  	clone.set({
+                    	opacity: 1
+                    });
+                  }
                   
                   var elements = new fabric.Textbox("", {
                     originX: 'center',
@@ -244,7 +256,7 @@ function generate_tile(tile, circle, group, id, text, isActive) {
                     fontFamily: "input-sans, sans-serif",
                     fontWeight: 400,
                     textAlign: "center",
-                    fill:"#fff",
+                    fill:"#000",
                     id:id + "_circle_" + circle_number
                   });
 
@@ -300,7 +312,8 @@ function generate_tile(tile, circle, group, id, text, isActive) {
       org_left: group.left
     })
 
-    //group.setShadow("0px 15px 15px rgba(55, 38, 77, 1)");
+    //console.log("rgb("+convertHex(circle.fill)+") 2px 2px");
+    group.setShadow("0px 0px 0px rgb("+convertHex(circle.fill)+")");
     
   	canvas.add(group);
   	
@@ -351,13 +364,13 @@ function load_pop_up(top, left) {
       originX: 'center',
       originY: 'center',
       left: left,
-      top: top-75,
+      top: top - 52,
       width: 291,
-      fontSize: 12,
+      fontSize: 14,
       fontFamily: "input-sans, sans-serif",
       fontWeight: 400,
       textAlign: "center",
-      fill:"#D0BAEC",
+      fill:"#8F8F8F",
       charSpacing:0,
       id:"header"
     });
@@ -377,17 +390,18 @@ function load_pop_up(top, left) {
       id:"footer"
     });
 
+    
     input = new fabric.Textbox('Tap and Type', {
       originX: 'center',
       originY: 'center',
       left: left,
-      top: top-20,
+      top: top-6,
       width: 291,
       fontSize: 18,
       fontFamily: "input-sans, sans-serif",
       fontWeight: 400,
       textAlign: "center",
-      fill:"#D0BAEC",
+      fill:"#4D4D4D",
       objecttype: 'text',
       id:"input",
       hasControls:false,
@@ -397,6 +411,7 @@ function load_pop_up(top, left) {
       lockRotation: true,
     });
 
+
     pop_up_group.set({
       selectable:false,
       subTargetCheck:true
@@ -404,7 +419,7 @@ function load_pop_up(top, left) {
 
     pop_up_group.addWithUpdate(pop_obj)
     pop_up_group.addWithUpdate(header)
-    pop_up_group.addWithUpdate(footer)
+    //pop_up_group.addWithUpdate(footer)
     pop_up_group.addWithUpdate(input)
 
     canvas.add(pop_up_group);
@@ -440,11 +455,11 @@ function ungroup(group) {
             selectable:false,
             editable: false,
             width: 291,
-            fontSize: 12,
+            fontSize: 14,
             fontFamily: "input-sans, sans-serif",
             fontWeight: 400,
             textAlign: "center",
-            fill:"#D0BAEC",
+            fill:"#8F8F8F",
           })
         }
 
@@ -477,7 +492,7 @@ function ungroup(group) {
             fontFamily: "input-sans, sans-serif",
             fontWeight: 400,
             textAlign: "center",
-            fill:"#D0BAEC",
+            fill:"#4D4D4D",
             objecttype: 'text',
             id:"input"
           })
@@ -499,7 +514,8 @@ function addTextNode(text, top, left) {
   for (var i = 0; i < active_group.getObjects().length; i++) {
     if (active_group.getObjects()[i].id == current_circle.id && active_group.getObjects()[i].type == "textbox" ) {
       active_group.getObjects()[i].set({
-        text:text
+        text:text,
+        backgroundColor:'rgb(242,242,242,0.4)'
       })
     }
   }
@@ -555,6 +571,14 @@ function move_the_stack(new_group) {
           }
         });
 
+        stack[i].animate('shadow.blur', '0', {
+          duration: 250,
+          onChange: canvas.renderAll.bind(canvas),
+          onComplete: function() {
+            //callback code goes here
+          }
+        });
+
         for (var e = 0; e < stack[i].getObjects().length; e++) {
           if (stack[i].getObjects()[e].id == "title") {
             stack[i].getObjects()[e].set({
@@ -575,6 +599,19 @@ function move_the_stack(new_group) {
               }
             });
           }
+
+          if (stack[i].getObjects()[e].type == "circle") {
+          	if (!stack[i].getObjects()[e].isFilled) {
+          		stack[i].getObjects()[e].animate('opacity', '0', {
+	              duration: 250,
+	              onChange: canvas.renderAll.bind(canvas),
+	              onComplete: function() {
+	                //callback code goes here
+	              }
+	            });
+          	}
+          }
+
         }
       }
       
@@ -637,6 +674,16 @@ function move_the_stack(new_group) {
             })
           }
         }
+
+        if (active_group.getObjects()[i].type == "circle") {
+            active_group.getObjects()[i].animate('opacity', '1', {
+              duration: 250,
+              onChange: canvas.renderAll.bind(canvas),
+              onComplete: function() {
+                //callback code goes here
+              }
+            });
+          }
       }
 
       active_group = new_group
@@ -653,15 +700,17 @@ function move_the_stack(new_group) {
         }
       }
     }
+  	dom_layer[active_group.pos].classList.remove("hidden");
   }
-  dom_layer[active_group.pos].classList.remove("hidden");
   canvas.renderAll();
 }
 
 function highligt_the_stack(the_group) {
   if (state == 0) {
     if (the_group != old_highlight_group) {
-      the_group.animate('opacity', '1', {
+    	//the_group.shadow.blur = 10;
+      
+      the_group.animate('shadow.blur', '10', {
         duration: 250,
         onChange: canvas.renderAll.bind(canvas),
         onComplete: function() {
@@ -670,13 +719,16 @@ function highligt_the_stack(the_group) {
       });
       
       if (old_highlight_group != undefined && !old_highlight_group.isActive) {
-        old_highlight_group.animate('opacity', '1', {
+      	//the_group.shadow.blur = 0;
+        
+        old_highlight_group.animate('shadow.blur', '0', {
           duration: 250,
           onChange: canvas.renderAll.bind(canvas),
           onComplete: function() {
             //callback code goes here
           }
         });
+        
       }
 
       canvas.renderAll();
@@ -700,7 +752,23 @@ function spread_the_stack() {
   document.getElementById("map").removeEventListener("click", spread_the_stack)
 
   for (var i = stack.length - 1; i >= 0; i--) {
+
+  	stack[i].animate('shadow.blur', '0', {
+			duration: 250,
+			onChange: canvas.renderAll.bind(canvas),
+			onComplete: function() {
+			//callback code goes here
+		}
+    });
+
     for (var e = 0; e < stack[i].getObjects().length; e++) {
+    	
+    	if (stack[i].getObjects()[e].type == "circle") {
+	        stack[i].getObjects()[e].set({
+	          opacity:1
+	        })
+	    }
+
       if (stack[i].getObjects()[e].id == "title") {
         stack[i].getObjects()[e].set({
           top: -140,
@@ -731,7 +799,7 @@ function spread_the_stack() {
     var filled_circle = 9;
     var _length = stack[i].getObjects().length;
     for (var c = 9; c < _length; c++) {
-      if (!stack[i]._objects[filled_circle].isFilled && stack[i]._objects[filled_circle].type != "textbox") {
+      if (!stack[i]._objects[filled_circle].isFilled && stack[i]._objects[filled_circle].type != "textbox" && stack[i]._objects[filled_circle].id != "overlay") {
         stack[i].remove(stack[i]._objects[filled_circle]);
       } else filled_circle++;
     }
@@ -817,10 +885,10 @@ function addValues() {
       originY: 'center',
       left: width*i,
       id: values[i],
-      fill: '#D0BAEC',
-      stroke: '#412E5A',
-      strokeWidth: 2,
-      radius: small_circle,
+      fill: '#4D4D4D',
+      stroke: '#4D4D4D',
+      strokeWidth: 0,
+      radius: 4,
       subTargetCheck:true,
       isValue: true,
       text:values[i]
@@ -879,7 +947,7 @@ function addValues() {
     originX: 'center',
     originY: 'center',
     left: canvas.width/2,
-    top: canvas.height - valuesGroup.height,
+    top: canvas.height - valuesGroup.height/2,
     scaleX: 0.75,
     scaleY: 0.75,
     opacity: 0,
@@ -905,6 +973,7 @@ function expose_the_stack(){
   document.getElementById("map").classList.add("disabled");
   document.getElementById("expose").classList.remove("pulse");
   document.getElementById("expose").removeEventListener("click", expose_the_stack)
+
   for (var i = 0; i < canvas.getObjects().length; i++) {
     if (canvas.getObjects()[i].type == "line") {
       if (theProduct[canvas.getObjects()[i].to]) {
@@ -928,44 +997,53 @@ function expose_the_stack(){
           }
         });
       }
-
-      if (stack[i].getObjects()[e].type == "circle") {
-        stack[i].getObjects()[e].animate({
-          radius: big_circle,
-          strokeWidth: 4,
-        },{
-          duration: 250,
-          onChange: canvas.renderAll.bind(canvas),
-          onComplete: function() {
-            //callback code goes here
-          }
-        });
-
-        stack[i].getObjects()[e].set({
-          stroke:"#412E5A",
-          fill: '#FF0000',
-        })
-
-        stack[i].getObjects()[e].setShadow({
-          color: '#FF0000',
-          blur: 5,
-          offsetX: 0,
-          offsetY: 0
-        });
-      }
     }
   }
+
+  for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
+  	if (selected_values.indexOf(canvas.getObjects()[5].getObjects()[i].id) != -1) {
+  		console.log(canvas.getObjects()[5].getObjects()[i].id +" : " + canvas.getObjects()[5].getObjects()[i].type);
+  		if (canvas.getObjects()[5].getObjects()[i].type == "textbox") {
+  			canvas.getObjects()[5].getObjects()[i].set({
+  				fill:"#2D9DD7",
+  				selected:true
+  			});
+  		}
+
+  		if (canvas.getObjects()[5].getObjects()[i].type == "circle") {
+  			canvas.getObjects()[5].getObjects()[i].set({
+  				fill:"#2D9DD7",
+  				radius:10,
+  				selected:true
+  			});
+  		}
+  	}
+  }
+
+  for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
+  	try{
+  		if (!canvas.getObjects()[5].getObjects()[i].selected) {
+  			canvas.getObjects()[5].getObjects()[i].set({
+  				opacity:0.65
+  			})
+  		}
+  	} catch {}
+  }
+
+
   state++;
 }
 
 function goToNextStep() {
   if (state == 0) {
+  	document.getElementById("number1").innerHTML = "✓";
     document.getElementById("map").classList.remove("disabled");
     document.getElementById("map").classList.add("pulse");
     document.getElementById("map").addEventListener("click", spread_the_stack)
   }
 
   if (state == 1) {
+  	document.getElementById("number2").innerHTML = "✓";
     document.getElementById("expose").classList.remove("disabled");
     document.getElementById("expose").classList.add("pulse");
     document.getElementById("expose").addEventListener("click", expose_the_stack)
@@ -1002,6 +1080,7 @@ canvas.on('mouse:move', function(options) {
       });
     }
   }
+
   if (isDown){
     var pointer = canvas.getPointer(options.e);
     line.set({ x2: pointer.x, y2: pointer.y });
@@ -1024,16 +1103,22 @@ canvas.on('mouse:down', function(options) {
       if (state == 0) {
         load_pop_up(options.pointer.y-100, options.pointer.x)
       }
+    }
+
+    if (options.subTargets[0].type == "circle" && options.subTargets[0].isValue && !isDown) {
+        current_circle = options.subTargets[0];
+        current_circle.set({
+        isClisked:true
+      });
 
       if (state == 1) {
-
         isDown = true;
         stack_circle = options.subTargets[0]
 
         var pointer = canvas.getPointer(options.e);
         var points = [ pointer.x, pointer.y, pointer.x, pointer.y ];
         line = new fabric.Line(points, {
-          strokeWidth: 4,
+          strokeWidth: 2,
           fill: current_circle.fill,
           stroke: current_circle.fill,
           //strokeDashArray: [5, 5],
@@ -1059,7 +1144,7 @@ canvas.on('mouse:down', function(options) {
 canvas.on('mouse:up', function(options){
   if (state == 1) {
     try {
-      if (options.subTargets[0].isValue) {
+      if (options.subTargets[0].isValue != true) {
         isDown = false;
         
         current_circle.animate({radius:small_circle,isClisked:false},{
@@ -1084,8 +1169,14 @@ canvas.on('mouse:up', function(options){
 
         line.set({
           from:stack_circle.text,
-          to:current_circle.text
+          to:current_circle.layer,
+          stroke:current_circle.fill
         });
+
+        if (problem_values.indexOf(line.from) != -1) {
+        	selected_values.push(line.from)
+        	console.log(line.from + " was added");
+        }
 
         connections++
       }
@@ -1151,5 +1242,15 @@ purple_group.on('mouseover', function(options) {
 });
 
 $( document ).ready(function() {
-    $('#modal').modal('show')
+    //$('#modal').modal('show')
 });
+
+function convertHex(hex){
+    hex = hex.replace('#','');
+    r = parseInt(hex.substring(0,2), 16);
+    g = parseInt(hex.substring(2,4), 16);
+    b = parseInt(hex.substring(4,6), 16);
+
+    result = r+','+g+','+b;
+    return result;
+}

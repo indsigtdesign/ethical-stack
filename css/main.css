@@ -113,7 +113,7 @@ textarea {
 
    .canvas-container{
     position: absolute !important;
-    top: 280px !important;
+    top: 260px !important;
     left: 50% !important;
     margin-left: -720px;
     cursor: default !important;
@@ -131,13 +131,13 @@ textarea {
    }
 
    .navbar-light .navbar-nav .nav-link{
-    font-family: TabletGothic;
+    font-family: tablet-gothic;
     font-size: 16px;
     color: #FFFFFF;
    }
 
   h5{
-    font-family: TabletGothic;
+    font-family: tablet-gothic;
     font-size: 16px;
     color: #8F8F8F;
     letter-spacing: 0;
@@ -155,12 +155,12 @@ textarea {
   }
 
   h3{
-    font-family: TabletGothic-Bold;
+    font-family: tablet-gothic;
     font-size: 22px;
   }
 
   h1{
-    font-family: TabletGothic-Light;
+    font-family: tablet-gothic;
     font-size: 32px;
     color: #4A525D;
     letter-spacing: -0.15px;
@@ -205,7 +205,7 @@ textarea {
   }
 
   .alert-secondary p{
-    font-family: TabletGothic;
+    font-family: tablet-gothic;
     font-size: 16px;
     color: #4D4D4D;
     letter-spacing: 0.3px;
@@ -225,7 +225,7 @@ textarea {
   }
 
   .btn-virteu { 
-    font-family: TabletGothic-Bold;
+    font-family: tablet-gothic;
     font-size: 15px;
     color: #4D4D4D;
     text-align: center;
@@ -282,13 +282,13 @@ textarea {
 
   .number{
     background: #4D4D4D;
-    font-family: TabletGothic-Bold;
+    font-family: tablet-gothic;
     font-size: 15px;
     color: #FFFFFF;
     display: inline-block;
     width: 24px;
     height: 24px;
-    line-height: 27px;
+    line-height: 23px;
     border-radius: 24px;
     margin-right: 12px;
   }
@@ -297,7 +297,7 @@ textarea {
     color: #4D4D4D;
     background-color: rgba(0,0,0,0);
     border: 2px solid #4D4D4D;
-    line-height: 24px; 
+    line-height: 20px; 
   }
 
   .pulse{
@@ -311,27 +311,33 @@ textarea {
 
   @-webkit-keyframes pulse {
     0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(91,64,126, 1);
+      -webkit-box-shadow: 0 0 0 0 rgba(143,143,143, 1);
+      background-color: rgba(143,143,143, 1);
     }
     70% {
-        -webkit-box-shadow: 0 0 0 10px rgba(91,64,126, 0);
+        -webkit-box-shadow: 0 0 0 10px rgba(143,143,143, 0);
+        background-color: rgba(143,143,143, 0);
     }
     100% {
-        -webkit-box-shadow: 0 0 0 0 rgba(91,64,126, 0);
+        -webkit-box-shadow: 0 0 0 0 rgba(143,143,143, 0);
+        
     }
   }
   @keyframes pulse {
     0% {
-      -moz-box-shadow: 0 0 0 0 rgba(91,64,126, 1);
-      box-shadow: 0 0 0 0 rgba(91,64,126, 1);
+      -moz-box-shadow: 0 0 0 0 rgba(143,143,143, 1);
+      box-shadow: 0 0 0 0 rgba(143,143,143, 1);
+      background-color: rgba(143,143,143, 1);
     }
     70% {
-        -moz-box-shadow: 0 0 0 10px rgba(91,64,126, 0);
-        box-shadow: 0 0 0 10px rgba(91,64,126, 0);
+        -moz-box-shadow: 0 0 0 10px rgba(143,143,143, 0);
+        box-shadow: 0 0 0 10px rgba(143,143,143, 0);
+        background-color: rgba(143,143,143, 0);
     }
     100% {
-        -moz-box-shadow: 0 0 0 0 rgba(91,64,126, 0);
-        box-shadow: 0 0 0 0 rgba(91,64,126, 0);
+        -moz-box-shadow: 0 0 0 0 rgba(143,143,143, 0);
+        box-shadow: 0 0 0 0 rgba(143,143,143, 0);
+
     }
   }
 
@@ -355,7 +361,7 @@ textarea {
   }
 
   .modal-body p{
-    font-family: TabletGothic;
+    font-family: tablet-gothic;
     font-size: 16px;
     color: #4D4D4D;
     letter-spacing: 0;
