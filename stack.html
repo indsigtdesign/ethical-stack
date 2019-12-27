@@ -1,0 +1,170 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <script src="https://kit.fontawesome.com/ff66c49fff.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.typekit.net/hfz3wwh.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div id="bg-gradient"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="./img/logo.svg" width="127" height="46" alt="">
+      </a>
+      
+      <ul class="navbar-nav  ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ethics?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="row ml-1 mr-1 mt-2">
+
+      <div class="btn-group mt-2 ml-auto mr-auto" role="group">
+        <button type="button" id="create" class="btn btn-virteu" data-toggle="button"> <span class="number" id="number1">1</span> POPULATE YOUR STACK </button>
+      
+        <i class="fas fa-caret-right"></i>
+      
+        <button type="button" id="map" class="btn btn-virteu disabled" role="button"><span class="number" id="number2">2</span> ENABLE YOUR VALUES</button>
+      
+        <i class="fas fa-caret-right"></i>
+      
+        <button type="button" id="expose" class="btn btn-virteu disabled" role="button"><span class="number" id="number3">3</span> MAP CONNECTIONS</button>
+      
+        <i class="fas fa-caret-right"></i>
+      
+        <button type="button" id="REVIEW" class="btn btn-virteu disabled" role="button"><span class="number" id="number4">4</span> REVIEW ISSUES</button>
+      </div>
+    </div>
+
+    <div class="row ml-2 mr-2 ">
+      <div class="col-12 border-bottom mt-3"></div>
+    </div>
+
+    <div class="row ml-1 mr-1 mt-4">
+      <div class="col-1">
+        <button type="button" class="btn" data-toggle="modal" data-target="#modal" style="color: #2D9DD7; opacity: 0.5;">
+          <i class="far fa-question-circle fa-2x"></i>
+        </button>
+      </div>
+
+      <div class="col-10" >
+        <h1 class="text-center mb-1">Connecto Perfecto</h1>
+        <h5 class="text-center">Click a node to add an element to your stack.</h5>
+      </div>
+    </div>
+
+    <div class="row ml-1 mr-1 mt-5">
+    
+    <div class="col-3">
+      <div class="alert alert-secondary" id="device">
+        <h3 style="color: #04BBCE">Device layer</h3>
+        <p>Add anything that describes the product itself. Is it software, hardware, medium-ware? What kind of a product is it (wearable? smart home  industrial IoT?), what is inside the device (sensors, microprocessors, connection types)?</p>
+      </div>
+    </div>
+
+    <div class="col-6"></div>
+  
+    <div class="col-3 mt-6">
+      <div class="alert alert-secondary hidden" id="data">
+        <h3 style="color: #17BC89">Data layer</h3>
+        <p>What data does your device gather and use? Note primary data gathered from sensors, people - sound levels, steps, heart rate, email address - and secondary data - inferences, architecture, analytics.</p>
+      </div>
+    </div>
+      
+    <div class="col-3 mt-6">
+      <div class="alert alert-secondary hidden" id="context">
+        <h3 style="color: #FAB644">Context layer</h3>
+        <p>The Context Layer is the home for all the physical components that comprise your product.  Chili integer developers and developers policies. Nutrition residents soccer sad old and ugly netus et malesuada hunger and poverty.</p>
+      </div>
+    </div>
+
+    <dir class="col-6"></dir>
+
+    <div class="col-3 mt-11">
+      <div class="alert alert-secondary hidden" id="team">
+        <h3 style="color: #FA7A44">Team layer</h3>
+        <p>The Team Layer is the home for all the physical components that comprise your product.  Chili integer developers and developers policies. Nutrition residents soccer sad old and ugly netus et malesuada hunger and poverty.</p>
+      </div>
+    </div>
+
+    <div class="col-3 mt-6">
+      <div class="alert alert-secondary hidden" id="parties">
+        <h3 style="color: #D544FA">3rd Parties layer</h3>
+        <p>The 3rd Parties Layer is the home for all the physical components that comprise your product.  Chili integer developers and developers policies. Nutrition residents soccer sad old and ugly netus et malesuada hunger and poverty.</p>
+      </div>
+    </div>
+      
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Populate your stack with elements from all different parts of your product - from sensors to data processing algorithms to the people who will use it and the values that underlie it. Here are some suggestions for you to populate your stack.   
+          </p>
+
+          <p>
+            We can give you more precise feedback and better questions about your product if you enter the core elements that compose the product across these different layers.
+          </p>
+
+          <p>
+            This system thinking can help to map out the many levels a product will travel across and therefore where it could create positive and negative effects.
+          </p>
+
+          <p>
+            <span class="font-weight-bold">Click a node to add an element. </span> Describe each element with general categories – for example: “elderly,” not “Anna.”
+          </p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary pl-5 pr-5 ml-auto mr-auto" data-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="c" width="1440" height="740" margin-bottom></canvas>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
