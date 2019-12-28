@@ -111,7 +111,8 @@ var old_highlight_group;
 
 
 //ethic values
-var values = ["Privacy","Participation","Accountability","Autonomy","Placeholder","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Diversity","Placeholder","Ineteroperability","Data Protection","Safety & Security","Wellbeing","Placeholder"]
+var values = ["Privacy","Participation","Accountability","Autonomy","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Diversity","Ineteroperability","Data Protection","Safety & Security","Wellbeing"]
+
 var problem_values = ["Dignity","Non-discrimination","Autonomy","Responsibility","Accountability","Sustainability","Safety & Security","Openness","Wellbeing","Transparency","Participation","Inclusion & Equality"]
 
 var selected_values = [];
@@ -294,7 +295,7 @@ function generate_tile(tile, circle, group, id, text, isActive) {
   		selectable:false,
   		originX: 'center',
   		originY: 'center',
-  		top: (group.height*1.15) + ((height*1.2) * amount_groups),
+  		top: (group.height*1.15) + ((height*0.85) * amount_groups),
   		left: (canvas_width/2),
   		subTargetCheck:true,
   		perPixelTargetFind:true,
@@ -746,7 +747,9 @@ function spread_the_stack() {
   }
 
   state++;
-
+  document.getElementById('the-description').innerHTML = "Draw lines between the values that inform your product and the elements in your stack."
+  document.getElementById('modal-text').innerHTML = "Materials: What is connected to what? What depends on what? Demonstrate the dependencies in your product. Even small decisions in hardware and software can have cascading impacts because of a) how dependent everything is within new connected technology and therefore b) if one thing goes down or is ill-designed, everything goes down. Furthermore, the connections within a product demonstrate the push and pull around difficult decisions - which is useful to demonstrate within team decisions. <br><br> Values: Even if everything in the product “works”, it is still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit your job or feel as though you’ve failed your mission if any of these ethical values were compromised? If any are important for you, show where you are putting them into action by connecting them to those material elements. More guidance.<br><br>The ethical values we present here integrate values that have been identified by VIRT-EU consortium partners at Politecnico di Torino in data protection regulator decisions across the European Union with values identified in ethnographic research by the teams from LSE and ITU."
+  $('#modal').modal('show')
   document.getElementById("map").classList.remove("pulse");
   document.getElementById("create").classList.add("disabled");
   document.getElementById("map").removeEventListener("click", spread_the_stack)
@@ -908,33 +911,33 @@ function addValues() {
       id:values[i]
     });
 
-    if (i < 0 && i > 5) {
+    if (i < 0 && i > 4) {
       circle.set({
         top: 0+(small_circle)
       })
     }
 
-    if (i > 4 && i < 11) {
+    if (i > 3 && i < 9) {
       text.set({
         top: height/2+25,
-        left: (width*(i-5))-(width/2)
+        left: (width*(i-4))-(width/2)
       })
 
       circle.set({
         top: height/2+small_circle,
-        left: (width*(i-5))-(width/2)
+        left: (width*(i-4))-(width/2)
       })
     }
 
-    if (i > 10 && i < 16) {
+    if (i > 8 && i < 16) {
       text.set({
         top: (height)+25,
-        left: (width*(i-11))
+        left: (width*(i-9))
       })
 
       circle.set({
         top: (height)+small_circle,
-        left: (width*(i-11))
+        left: (width*(i-9))
       })
     }
 
@@ -973,6 +976,13 @@ function expose_the_stack(){
   document.getElementById("map").classList.add("disabled");
   document.getElementById("expose").classList.remove("pulse");
   document.getElementById("expose").removeEventListener("click", expose_the_stack)
+
+  document.getElementById('the-description').innerHTML = "Answer questions by clicking on the blue highlighted values." 
+
+  document.getElementById('modal-text').innerHTML = "Based on your description of your system, we can identify a few possible questions for you to consider. Consider each question and expand it to see why the issue it presents might be problematic.<br><br>The original PESIA was developed by POLITO. You can see the full version of it here.<br><br>Based on the VIRT-EU research, we can help identify the answers that have the most risk from an ethical and social point of view. Risk can be in terms of possible harm to your users, to your own values and therefore your company's foundation and team, or to your overall public reputation and relations.<br><br>These are not grades. They are indications of where you can align better with your values and tools that we hope will help you.<br><br>These areas do not cover all of the possible issues you may have. If you want to go through all of the issues, you can use PESIA for a full-blown privacy, ethical and social impact assessment questionnaire."
+  $('#modal').modal('show')
+
+  state++;
 
   for (var i = 0; i < canvas.getObjects().length; i++) {
     if (canvas.getObjects()[i].type == "line") {
@@ -1013,7 +1023,7 @@ function expose_the_stack(){
   		if (canvas.getObjects()[5].getObjects()[i].type == "circle") {
   			canvas.getObjects()[5].getObjects()[i].set({
   				fill:"#2D9DD7",
-  				radius:10,
+  				radius:small_circle,
   				selected:true
   			});
   		}
@@ -1058,6 +1068,16 @@ function goToNextStep() {
 /**************************************/
 
 canvas.on('mouse:move', function(options) {
+	if (state == 3 && current_circle) {
+		current_circle.animate('radius', small_circle, {
+	        duration: 100,
+	        onChange: canvas.renderAll.bind(canvas),
+        onComplete: function() {
+          //callback code goes here
+        }
+      });
+	}
+
 	if (options.subTargets != 0) {
 
     if (options.subTargets[0].type == "circle") {
@@ -1103,6 +1123,15 @@ canvas.on('mouse:down', function(options) {
       if (state == 0) {
         load_pop_up(options.pointer.y-100, options.pointer.x)
       }
+    }
+
+    if (options.subTargets[0].type == "circle" && options.subTargets[0].fill == "#2D9DD7") {
+        if (state == 3) {
+        	var pointer = canvas.getPointer(event.e);
+			var posX = pointer.x;
+			var posY = pointer.y;
+			popUpQuestions(posX,posY);
+      	}
     }
 
     if (options.subTargets[0].type == "circle" && options.subTargets[0].isValue && !isDown) {
@@ -1241,10 +1270,6 @@ purple_group.on('mouseover', function(options) {
   highligt_the_stack(purple_group); 
 });
 
-$( document ).ready(function() {
-    //$('#modal').modal('show')
-});
-
 function convertHex(hex){
     hex = hex.replace('#','');
     r = parseInt(hex.substring(0,2), 16);
@@ -1254,3 +1279,23 @@ function convertHex(hex){
     result = r+','+g+','+b;
     return result;
 }
+
+function popUpQuestions(posX,posY) {
+	var pop_up = document.getElementById("pop-up")
+	pop_up.style.top = (posY-10)+"px";
+	pop_up.style.left = (posX+30)+"px";
+	pop_up.style.display = "inline-block";
+}
+
+function isReady() {
+	var overlay = document.getElementById("product-name");
+	var input = document.getElementById("product-form").value;
+
+	if (input != "") {
+		document.getElementById("the-product").innerHTML = input
+		$("#overlay").fadeOut( "slow", function() {
+			$('#modal').modal('show')
+		});
+	}
+}
+

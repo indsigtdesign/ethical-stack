@@ -183,6 +183,7 @@ h1{
   color: #4A525D;
   letter-spacing: -0.15px;
   text-align: center;
+  margin-top: 0;
 } 
 
 p{
@@ -464,6 +465,78 @@ fieldset[disabled] .main-btn.active {
 .bold{
   font-weight: 700;
 }
+
+#overlay{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+}
+
+#product-name{
+  width: 100%;
+  max-width: 50vw;
+  padding: 15px;
+  margin: auto;
+  margin-top: calc(50vh - 155px);
+}
+
+#product-form{
+  border-radius: 8px;
+  box-shadow: 0 0 9px 0 #2d9dd7;
+  border: solid 2px #2d9dd7;
+  text-align: center;
+  font-family: tablet-gothic;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  color: #4d4d4d;
+  background-color: rgba(255,255,255,0);
+}
+
+#product-form::placeholder{
+  color: rgba(77,77,77,0.3);
+}
+
+#pop-up{
+  width: 420px;
+  height: 240px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border: solid 1px #e6e6e6;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+/* Popup arrow */
+#pop-up::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -1.25em;
+    bottom: -2em;
+    left: 50%;
+    box-sizing: border-box;
+    
+    border: 1em solid black;
+    border-color: transparent transparent #ffffff #ffffff;
+    
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    
+    box-shadow: -3px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+
+
 
 /* ==========================================================================
    Helper classes
