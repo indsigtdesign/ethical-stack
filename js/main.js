@@ -111,9 +111,11 @@ var old_highlight_group;
 
 
 //ethic values
-var values = ["Privacy","Participation","Accountability","Autonomy","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Diversity","Ineteroperability","Data Protection","Safety & Security","Wellbeing"]
+var values = ["privacy","participation","accountability","autonomy","responsibility","dignity","transparency","non-discrimination","inclusion-equality","ineteroperability","data-protection","safety-security","wellbeing"]
 
-var problem_values = ["Dignity","Non-discrimination","Autonomy","Responsibility","Accountability","Sustainability","Safety & Security","Openness","Wellbeing","Transparency","Participation","Inclusion & Equality"]
+var valuesTxt = ["Privacy","Participation","Accountability","Autonomy","Responsibility","Dignity","Transparency","Non-Discrimination","Inclusion & Equality","Ineteroperability","Data Protection","Safety & Security","Wellbeing"]
+
+var problem_values = ["dignity","non-discrimination","autonomy","responsibility","accountability","sustainability","safety-security","openness","wellbeing","transparency","participation","inclusion-equality"]
 
 var selected_values = [];
 
@@ -897,7 +899,7 @@ function addValues() {
       text:values[i]
     });
 
-    var text = new fabric.Textbox(values[i], {
+    var text = new fabric.Textbox(valuesTxt[i], {
       originX: 'center',
       originY: 'center',
       left: width*i,
@@ -1281,9 +1283,14 @@ function convertHex(hex){
 }
 
 function popUpQuestions(posX,posY) {
-	var pop_up = document.getElementById("pop-up")
-	pop_up.style.top = (posY-10)+"px";
-	pop_up.style.left = (posX+30)+"px";
+
+	for (var i = 0; i < problem_values.length; i++) {
+		document.getElementById(problem_values[i]).style.display = "none";
+	}
+
+	var pop_up = document.getElementById(current_circle.id)
+	pop_up.style.top = (event.clientY - 280)+"px";
+	pop_up.style.left = (event.clientX - 210)+"px";
 	pop_up.style.display = "inline-block";
 }
 
@@ -1298,4 +1305,8 @@ function isReady() {
 		});
 	}
 }
+
+$(document).ready(function() {
+    $('.carousel').carousel('pause');
+});
 

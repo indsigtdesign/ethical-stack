@@ -61,15 +61,15 @@
       <div class="btn-group mt-2 ml-auto mr-auto" role="group">
         <button type="button" id="create" class="btn btn-virteu" data-toggle="button"> <span class="number" id="number1">1</span> POPULATE YOUR STACK </button>
       
-        <i class="fas fa-caret-right"></i>
+        <i class="fas fa-caret-right menu-caret"></i>
       
         <button type="button" id="map" class="btn btn-virteu disabled" role="button"><span class="number" id="number2">2</span> ENABLE YOUR VALUES</button>
       
-        <i class="fas fa-caret-right"></i>
+        <i class="fas fa-caret-right menu-caret"></i>
       
         <button type="button" id="expose" class="btn btn-virteu disabled" role="button"><span class="number" id="number3">3</span> MAP CONNECTIONS</button>
       
-        <i class="fas fa-caret-right"></i>
+        <i class="fas fa-caret-right menu-caret"></i>
       
         <button type="button" id="REVIEW" class="btn btn-virteu disabled" role="button"><span class="number" id="number4">4</span> REVIEW ISSUES</button>
       </div>
@@ -137,8 +137,836 @@
   </div>
 
   <!-- pop up -->
-  <div id="pop-up">
-    
+  <div class="pop-up" id="dignity">
+    <h3 class="text-center mt-2">Dignity</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_01" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Does the IoT device need to be implanted into the user’s body?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_01" class="radio-custom" name="radio-group_01" type="radio">
+              <label for="radio-no_01" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_01" class="radio-custom" name="radio-group_01" type="radio">
+              <label for="radio-yes_01" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Is the IoT device able to transmit sensations to the user’s body (e.g. vibrations, sounds, etc.)?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_02" class="radio-custom" name="radio-group_02" type="radio">
+              <label for="radio-no_02" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_02" class="radio-custom"name="radio-group_02" type="radio">
+              <label for="radio-yes_02" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Could the device interfere or limit the normal functionality of the user’s body (e.g. exoskeletons)?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_03" class="radio-custom" name="radio-group_03" type="radio">
+              <label for="radio-no_03" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_03" class="radio-custom"name="radio-group_03" type="radio">
+              <label for="radio-yes_03" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Are the expectations of benefits realistic?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_04" class="radio-custom" name="radio-group_04" type="radio">
+              <label for="radio-no_04" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_04" class="radio-custom"name="radio-group_04" type="radio">
+              <label for="radio-yes_04" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will users be monitored in private areas such as bathrooms?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_05" class="radio-custom" name="radio-group_05" type="radio">
+              <label for="radio-no_05" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_05" class="radio-custom"name="radio-group_05" type="radio">
+              <label for="radio-yes_05" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will there be any spaces free of monitoring?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_06" class="radio-custom" name="radio-group_06" type="radio">
+              <label for="radio-no_06" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_06" class="radio-custom"name="radio-group_06" type="radio">
+              <label for="radio-yes_06" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_01" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_01" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_01" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_01" data-slide-to="1"></li>
+        <li data-target="#consider-carousel_01" data-slide-to="2"></li>
+        <li data-target="#consider-carousel_01" data-slide-to="3"></li>
+        <li data-target="#consider-carousel_01" data-slide-to="4"></li>
+        <li data-target="#consider-carousel_01" data-slide-to="5"></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="non-discrimination">
+    <h3 class="text-center mt-2">Non-discrimination</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_02" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the system take into account any particular characteristics of the users when making any determination, such as age, gender or disability?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_07" class="radio-custom" name="radio-group_07" type="radio">
+              <label for="radio-no_07" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_07" class="radio-custom"name="radio-group_07" type="radio">
+              <label for="radio-yes_07" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+        <!-- pop up item end-->
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Are the IoT device and associated software used for predictive purposes or classifying users according to their conditions, behaviour and preferences?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_08" class="radio-custom" name="radio-group_08" type="radio">
+              <label for="radio-no_08" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_08" class="radio-custom"name="radio-group_08" type="radio">
+              <label for="radio-yes_08" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+        <!-- pop up item end-->
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Do you have measures in place to avoid discrimination?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_09" class="radio-custom" name="radio-group_09" type="radio">
+              <label for="radio-no_09" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_09" class="radio-custom"name="radio-group_09" type="radio">
+              <label for="radio-yes_09" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+        <!-- pop up item end-->
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_02" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_02" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_02" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_02" data-slide-to="1" class=""></li>
+        <li data-target="#consider-carousel_02" data-slide-to="2" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="autonomy">
+    <h3 class="text-center mt-2">Autonomy</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the device reduce individuals ability to make their own decisions?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_10" class="radio-custom" name="radio-group_10" type="radio">
+              <label for="radio-no_10" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_10" class="radio-custom"name="radio-group_10" type="radio">
+              <label for="radio-yes_10" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the tool include some form of remote control?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_11" class="radio-custom" name="radio-group_11" type="radio">
+              <label for="radio-no_11" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_11" class="radio-custom"name="radio-group_11" type="radio">
+              <label for="radio-yes_11" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>If any limitations to user control exist, do they happen in contexts characterised by power asymmetries (e.g. workplace)?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_12" class="radio-custom" name="radio-group_12" type="radio">
+              <label for="radio-no_12" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_12" class="radio-custom"name="radio-group_12" type="radio">
+              <label for="radio-yes_12" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel" data-slide-to="1" class=""></li>
+        <li data-target="#consider-carousel" data-slide-to="2" class=""></li>
+
+      </ol>
+
+    </div>
+  </div>
+
+
+  <!-- pop up -->
+  <div class="pop-up" id="responsibility">
+    <h3 class="text-center mt-2">Responsibility</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_03" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will there be a way to challenge any decisions made by the system?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_13" class="radio-custom" name="radio-group_13" type="radio">
+              <label for="radio-no_13" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_13" class="radio-custom"name="radio-group_13" type="radio">
+              <label for="radio-yes_13" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will there be clear lines of responsibility for any outcomes, particularly between the developers of the tools and the operators to ensure that any issues are always dealt with?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_14" class="radio-custom" name="radio-group_14" type="radio">
+              <label for="radio-no_14" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_14" class="radio-custom"name="radio-group_14" type="radio">
+              <label for="radio-yes_14" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will there be a way to challenge any decisions on productivity, resource allocation or treatment made by the system?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_15" class="radio-custom" name="radio-group_15" type="radio">
+              <label for="radio-no_15" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_15" class="radio-custom"name="radio-group_15" type="radio">
+              <label for="radio-yes_15" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_03" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_03" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_03" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_03" data-slide-to="1" class=""></li>
+        <li data-target="#consider-carousel_03" data-slide-to="2" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="accountability">
+    <h3 class="text-center mt-2">Accountability</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_04" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active" >
+          <div class="text-center" id="carousel-content">
+            <h8>Will you be sharing personal data with third parties?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_16" class="radio-custom" name="radio-group_15" type="radio">
+              <label for="radio-no_16" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_16" class="radio-custom"name="radio-group_15" type="radio">
+              <label for="radio-yes_16" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Have you set clear limits on what third parties or partners can do with that information?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_17" class="radio-custom" name="radio-group_16" type="radio">
+              <label for="radio-no_17" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_17" class="radio-custom"name="radio-group_16" type="radio">
+              <label for="radio-yes_17" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the device receive advertising messages from third parties?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_18" class="radio-custom" name="radio-group_17" type="radio">
+              <label for="radio-no_18" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_18" class="radio-custom"name="radio-group_17" type="radio">
+              <label for="radio-yes_18" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the microphone in the device have a physical switch?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_19" class="radio-custom" name="radio-group_18" type="radio">
+              <label for="radio-no_19" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_19" class="radio-custom"name="radio-group_18" type="radio">
+              <label for="radio-yes_19" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_04" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_04" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_04" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_04" data-slide-to="0" class=""></li>
+        <li data-target="#consider-carousel_04" data-slide-to="0" class=""></li>
+        <li data-target="#consider-carousel_04" data-slide-to="0" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="sustainability">
+    <h3 class="text-center mt-2">Sustainability</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_05" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Are the devices reusable? How will they be disposed of otherwise?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_19" class="radio-custom" name="radio-group_19" type="radio">
+              <label for="radio-no_19" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_19" class="radio-custom"name="radio-group_19" type="radio">
+              <label for="radio-yes_19" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the servers providing remote functionalities keep functioning for the lifetime of the product?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_20" class="radio-custom" name="radio-group_20" type="radio">
+              <label for="radio-no_20" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_20" class="radio-custom"name="radio-group_20" type="radio">
+              <label for="radio-yes_20" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_05" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_05" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_05" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_05" data-slide-to="1" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="safety-security">
+    <h3 class="text-center mt-2">Safety & Security</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_06" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the device receive software updates for the lifetime of the product?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_21" class="radio-custom" name="radio-group_21" type="radio">
+              <label for="radio-no_21" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_21" class="radio-custom"name="radio-group_21" type="radio">
+              <label for="radio-yes_21" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Is there a unique user name and password for each user/device?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_22" class="radio-custom" name="radio-group_22" type="radio">
+              <label for="radio-no_22" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_22" class="radio-custom"name="radio-group_22" type="radio">
+              <label for="radio-yes_22" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Is there a point of contact to report security vulnerabilities?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_23" class="radio-custom" name="radio-group_23" type="radio">
+              <label for="radio-no_23" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_23" class="radio-custom"name="radio-group_23" type="radio">
+              <label for="radio-yes_23" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will you ensure the security of the data transmission?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_24" class="radio-custom" name="radio-group_24" type="radio">
+              <label for="radio-no_24" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_24" class="radio-custom"name="radio-group_24" type="radio">
+              <label for="radio-yes_24" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Can you ensure that vulnerable users are not reached by strangers using the device?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_25" class="radio-custom" name="radio-group_25" type="radio">
+              <label for="radio-no_25" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_25" class="radio-custom"name="radio-group_25" type="radio">
+              <label for="radio-yes_25" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_06" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_06" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_06" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_06" data-slide-to="1" class=""></li>
+        <li data-target="#consider-carousel_06" data-slide-to="2" class=""></li>
+        <li data-target="#consider-carousel_06" data-slide-to="3" class=""></li>
+        <li data-target="#consider-carousel_06" data-slide-to="4" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="openness">
+    <h3 class="text-center mt-2">Openness</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_07" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the device allow for third party add-ons or user re-programming?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_26" class="radio-custom" name="radio-group_26" type="radio">
+              <label for="radio-no_26" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_26" class="radio-custom"name="radio-group_26" type="radio">
+              <label for="radio-yes_26" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the software in the device be open source?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_27" class="radio-custom" name="radio-group_27" type="radio">
+              <label for="radio-no_27" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_27" class="radio-custom"name="radio-group_27" type="radio">
+              <label for="radio-yes_27" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_07" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_07" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_07" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_07" data-slide-to="1" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="wellbeing">
+    <h3 class="text-center mt-2">Wellbeing</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_08" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Do you allow for comparisons among users?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_275" class="radio-custom" name="radio-group_275" type="radio">
+              <label for="radio-no_275" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_275" class="radio-custom"name="radio-group_275" type="radio">
+              <label for="radio-yes_275" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="transparency">
+    <h3 class="text-center mt-2">Transparency</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_09" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Does the device display any sign when recording video and/or audio in its surroundings?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_28" class="radio-custom" name="radio-group_28" type="radio">
+              <label for="radio-no_28" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_28" class="radio-custom"name="radio-group_28" type="radio">
+              <label for="radio-yes_28" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Has information about the logic of data processing been provided to users?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_29" class="radio-custom" name="radio-group_29" type="radio">
+              <label for="radio-no_29" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_29" class="radio-custom"name="radio-group_29" type="radio">
+              <label for="radio-yes_29" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Has any information been provided about the project to the interested persons or to the public at large?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_30" class="radio-custom" name="radio-group_30" type="radio">
+              <label for="radio-no_30" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_30" class="radio-custom"name="radio-group_30" type="radio">
+              <label for="radio-yes_30" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Has the project adopted any procedure to give the opportunity to persons to ask information about the project?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_31" class="radio-custom" name="radio-group_31" type="radio">
+              <label for="radio-no_31" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_31" class="radio-custom"name="radio-group_31" type="radio">
+              <label for="radio-yes_31" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_09" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_09" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_09" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_09" data-slide-to="1" class=""></li>
+        <li data-target="#consider-carousel_09" data-slide-to="2" class=""></li>
+        <li data-target="#consider-carousel_09" data-slide-to="3" class=""></li>
+      </ol>
+
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="participation">
+    <h3 class="text-center mt-2">Participation</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_10" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Have you planned to engage stakeholders in the project development?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_32" class="radio-custom" name="radio-group_32" type="radio">
+              <label for="radio-no_32" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_32" class="radio-custom"name="radio-group_32" type="radio">
+              <label for="radio-yes_32" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pop up -->
+  <div class="pop-up" id="inclusion-equality">
+    <h3 class="text-center mt-2">Inclusion & Equality</h3>
+    <div class="divider"></div>
+    <div id="consider-carousel_11" class="carousel slide" data-ride="carousel" data-interval="false">
+      
+      <div class="carousel-inner">
+
+        <!-- pop up item-->
+        <div class="carousel-item active">
+          <div class="text-center" id="carousel-content">
+            <h8>Will the device be used to potentially restrict services to users or groups that are deemed uneconomical?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_33" class="radio-custom" name="radio-group_33" type="radio">
+              <label for="radio-no_33" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_33" class="radio-custom" name="radio-group_33" type="radio">
+              <label for="radio-yes_33" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- pop up item-->
+        <div class="carousel-item">
+          <div class="text-center" id="carousel-content">
+            <h8>Will data collected be used to influence socio-economic policies that may be detrimental to certain people, even if others benefit?</h8>
+          
+            <div id="radio-btns" class="mt-2">
+              <input id="radio-no_34" class="radio-custom" name="radio-group_34" type="radio">
+              <label for="radio-no_34" class="radio-custom-label">No</label>
+
+              <input id="radio-yes_34" class="radio-custom"name="radio-group_34" type="radio">
+              <label for="radio-yes_34" class="radio-custom-label">Yes</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="control-prev float-left" href="#consider-carousel_11" role="button" data-slide="prev">
+        <span class=""><i class="fas fa-caret-left"></i>Previous</span>
+      </a>
+
+      <a class="control-next float-right" href="#consider-carousel_11" role="button" data-slide="next">
+        <span class="">Next<i class="fas fa-caret-right"></i> </span>
+      </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#consider-carousel_11" data-slide-to="0" class="active"></li>
+        <li data-target="#consider-carousel_11" data-slide-to="1" class=""></li>
+      </ol>
+
+    </div>
   </div>
 
   <!-- Modal -->
