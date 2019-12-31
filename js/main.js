@@ -1117,7 +1117,7 @@ function goToNextStep() {
 /**************************************/
 
 canvas.on('mouse:move', function(options) {
-	if (state == 3 && current_circle) {
+	if (state > 1 && current_circle) {
 		current_circle.animate('radius', small_circle, {
 	        duration: 100,
 	        onChange: canvas.renderAll.bind(canvas),
@@ -1139,6 +1139,7 @@ canvas.on('mouse:move', function(options) {
         }
       });
     }
+
     if (options.subTargets[0].type == "group" && current_circle && !current_circle.isClisked) {
       current_circle.animate('radius', small_circle, {
         duration: 100,
@@ -1206,7 +1207,6 @@ canvas.on('mouse:down', function(options) {
           hoverCursor: 'help'
         });
         canvas.add(line);
-
       }
     }
 
@@ -1357,10 +1357,6 @@ function closePopUP(id) {
 	$("#"+id).css("display","none");
 }
 
-$(document).ready(function() {
-    $('.carousel').carousel('pause');
-});
-
 function showGroup(group) {
 	--amount_answered;
 
@@ -1436,15 +1432,3 @@ function showGroup(group) {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
