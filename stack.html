@@ -71,7 +71,7 @@
       
         <i class="fas fa-caret-right menu-caret"></i>
       
-        <button type="button" id="REVIEW" class="btn btn-virteu disabled" role="button"><span class="number" id="number4">4</span> REVIEW ISSUES</button>
+        <button type="button" id="review" class="btn btn-virteu disabled" role="button"><span class="number" id="number4">4</span> REVIEW ISSUES</button>
       </div>
     </div>
 
@@ -92,7 +92,7 @@
       </div>
     </div>
 
-    <div class="row ml-1 mr-1 mt-5">
+    <div class="row ml-1 mr-1 mt-5" id="review_margin">
     
     <div class="col-3">
       <div class="alert alert-secondary" id="device">
@@ -138,7 +138,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="dignity">
-    <h3 class="text-center mt-2">Dignity</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('dignity')"><i class="fas fa-times float-left"></i> </a>Dignity</h3>
     <div class="divider"></div>
     <div id="consider-carousel_01" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -149,10 +149,10 @@
             <h8>Does the IoT device need to be implanted into the user’s body?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_01" class="radio-custom" name="radio-group_01" type="radio">
+              <input id="radio-no_01" class="radio-custom" name="radio-group_01" type="radio" onclick="showGroup('')">
               <label for="radio-no_01" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_01" class="radio-custom" name="radio-group_01" type="radio">
+              <input id="radio-yes_01" class="radio-custom" name="radio-group_01" type="radio" onclick="showGroup('group_01')">
               <label for="radio-yes_01" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -163,10 +163,10 @@
             <h8>Is the IoT device able to transmit sensations to the user’s body (e.g. vibrations, sounds, etc.)?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_02" class="radio-custom" name="radio-group_02" type="radio">
+              <input id="radio-no_02" class="radio-custom" name="radio-group_02" type="radio" onclick="showGroup('')">
               <label for="radio-no_02" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_02" class="radio-custom"name="radio-group_02" type="radio">
+              <input id="radio-yes_02" class="radio-custom"name="radio-group_02" type="radio"  onclick="showGroup('group_02')">
               <label for="radio-yes_02" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -177,10 +177,10 @@
             <h8>Could the device interfere or limit the normal functionality of the user’s body (e.g. exoskeletons)?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_03" class="radio-custom" name="radio-group_03" type="radio">
+              <input id="radio-no_03" class="radio-custom" name="radio-group_03" type="radio" onclick="showGroup('')">
               <label for="radio-no_03" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_03" class="radio-custom"name="radio-group_03" type="radio">
+              <input id="radio-yes_03" class="radio-custom"name="radio-group_03" type="radio"  onclick="showGroup('group_03')">
               <label for="radio-yes_03" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -191,10 +191,10 @@
             <h8>Are the expectations of benefits realistic?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_04" class="radio-custom" name="radio-group_04" type="radio">
+              <input id="radio-no_04" class="radio-custom" name="radio-group_04" type="radio"  onclick="showGroup('group_04')">
               <label for="radio-no_04" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_04" class="radio-custom"name="radio-group_04" type="radio">
+              <input id="radio-yes_04" class="radio-custom"name="radio-group_04" type="radio" onclick="showGroup('')">
               <label for="radio-yes_04" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -205,10 +205,10 @@
             <h8>Will users be monitored in private areas such as bathrooms?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_05" class="radio-custom" name="radio-group_05" type="radio">
+              <input id="radio-no_05" class="radio-custom" name="radio-group_05" type="radio" onclick="showGroup('')">
               <label for="radio-no_05" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_05" class="radio-custom"name="radio-group_05" type="radio">
+              <input id="radio-yes_05" class="radio-custom"name="radio-group_05" type="radio"  onclick="showGroup('group_05')">
               <label for="radio-yes_05" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -219,10 +219,10 @@
             <h8>Will there be any spaces free of monitoring?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_06" class="radio-custom" name="radio-group_06" type="radio">
+              <input id="radio-no_06" class="radio-custom" name="radio-group_06" type="radio"  onclick="showGroup('group_06')">
               <label for="radio-no_06" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_06" class="radio-custom"name="radio-group_06" type="radio">
+              <input id="radio-yes_06" class="radio-custom"name="radio-group_06" type="radio" onclick="showGroup('')">
               <label for="radio-yes_06" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -252,7 +252,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="non-discrimination">
-    <h3 class="text-center mt-2">Non-discrimination</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('non-discrimination')"><i class="fas fa-times float-left"></i> </a> Non-discrimination</h3>
     <div class="divider"></div>
     <div id="consider-carousel_02" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -264,10 +264,10 @@
             <h8>Will the system take into account any particular characteristics of the users when making any determination, such as age, gender or disability?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_07" class="radio-custom" name="radio-group_07" type="radio">
+              <input id="radio-no_07" class="radio-custom" name="radio-group_07" type="radio" onclick="showGroup('')">
               <label for="radio-no_07" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_07" class="radio-custom"name="radio-group_07" type="radio">
+              <input id="radio-yes_07" class="radio-custom"name="radio-group_07" type="radio" onclick="showGroup('group_07')">
               <label for="radio-yes_07" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -280,10 +280,10 @@
             <h8>Are the IoT device and associated software used for predictive purposes or classifying users according to their conditions, behaviour and preferences?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_08" class="radio-custom" name="radio-group_08" type="radio">
+              <input id="radio-no_08" class="radio-custom" name="radio-group_08" type="radio" onclick="showGroup('')">
               <label for="radio-no_08" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_08" class="radio-custom"name="radio-group_08" type="radio">
+              <input id="radio-yes_08" class="radio-custom"name="radio-group_08" type="radio" onclick="showGroup('group_08')">
               <label for="radio-yes_08" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -296,10 +296,10 @@
             <h8>Do you have measures in place to avoid discrimination?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_09" class="radio-custom" name="radio-group_09" type="radio">
+              <input id="radio-no_09" class="radio-custom" name="radio-group_09" type="radio" onclick="showGroup('group_09')">
               <label for="radio-no_09" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_09" class="radio-custom"name="radio-group_09" type="radio">
+              <input id="radio-yes_09" class="radio-custom"name="radio-group_09" type="radio" onclick="showGroup('')">
               <label for="radio-yes_09" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -327,7 +327,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="autonomy">
-    <h3 class="text-center mt-2">Autonomy</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('autonomy')"><i class="fas fa-times float-left"></i> </a> Autonomy</h3>
     <div class="divider"></div>
     <div id="consider-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -339,10 +339,10 @@
             <h8>Will the device reduce individuals ability to make their own decisions?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_10" class="radio-custom" name="radio-group_10" type="radio">
+              <input id="radio-no_10" class="radio-custom" name="radio-group_10" type="radio" onclick="showGroup('')">
               <label for="radio-no_10" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_10" class="radio-custom"name="radio-group_10" type="radio">
+              <input id="radio-yes_10" class="radio-custom"name="radio-group_10" type="radio" onclick="showGroup('group_10')">
               <label for="radio-yes_10" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -354,10 +354,10 @@
             <h8>Will the tool include some form of remote control?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_11" class="radio-custom" name="radio-group_11" type="radio">
+              <input id="radio-no_11" class="radio-custom" name="radio-group_11" type="radio" onclick="showGroup('')">
               <label for="radio-no_11" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_11" class="radio-custom"name="radio-group_11" type="radio">
+              <input id="radio-yes_11" class="radio-custom"name="radio-group_11" type="radio" onclick="showGroup('group_11')">
               <label for="radio-yes_11" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -369,10 +369,10 @@
             <h8>If any limitations to user control exist, do they happen in contexts characterised by power asymmetries (e.g. workplace)?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_12" class="radio-custom" name="radio-group_12" type="radio">
+              <input id="radio-no_12" class="radio-custom" name="radio-group_12" type="radio" onclick="showGroup('')">
               <label for="radio-no_12" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_12" class="radio-custom"name="radio-group_12" type="radio">
+              <input id="radio-yes_12" class="radio-custom"name="radio-group_12" type="radio" onclick="showGroup('group_12')">
               <label for="radio-yes_12" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -401,7 +401,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="responsibility">
-    <h3 class="text-center mt-2">Responsibility</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('responsibility')"><i class="fas fa-times float-left"></i> </a> Responsibility</h3>
     <div class="divider"></div>
     <div id="consider-carousel_03" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -413,10 +413,10 @@
             <h8>Will there be a way to challenge any decisions made by the system?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_13" class="radio-custom" name="radio-group_13" type="radio">
+              <input id="radio-no_13" class="radio-custom" name="radio-group_13" type="radio" onclick="showGroup('group_13')">
               <label for="radio-no_13" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_13" class="radio-custom"name="radio-group_13" type="radio">
+              <input id="radio-yes_13" class="radio-custom"name="radio-group_13" type="radio" onclick="showGroup('')">
               <label for="radio-yes_13" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -428,10 +428,10 @@
             <h8>Will there be clear lines of responsibility for any outcomes, particularly between the developers of the tools and the operators to ensure that any issues are always dealt with?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_14" class="radio-custom" name="radio-group_14" type="radio">
+              <input id="radio-no_14" class="radio-custom" name="radio-group_14" type="radio" onclick="showGroup('group_14')">
               <label for="radio-no_14" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_14" class="radio-custom"name="radio-group_14" type="radio">
+              <input id="radio-yes_14" class="radio-custom"name="radio-group_14" type="radio" onclick="showGroup('')">
               <label for="radio-yes_14" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -443,10 +443,10 @@
             <h8>Will there be a way to challenge any decisions on productivity, resource allocation or treatment made by the system?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_15" class="radio-custom" name="radio-group_15" type="radio">
+              <input id="radio-no_15" class="radio-custom" name="radio-group_15" type="radio"  onclick="showGroup('group_15')">
               <label for="radio-no_15" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_15" class="radio-custom"name="radio-group_15" type="radio">
+              <input id="radio-yes_15" class="radio-custom"name="radio-group_15" type="radio" onclick="showGroup('')">
               <label for="radio-yes_15" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -473,7 +473,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="accountability">
-    <h3 class="text-center mt-2">Accountability</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('accountability')"><i class="fas fa-times float-left"></i> </a> Accountability</h3>
     <div class="divider"></div>
     <div id="consider-carousel_04" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -485,10 +485,10 @@
             <h8>Will you be sharing personal data with third parties?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_16" class="radio-custom" name="radio-group_15" type="radio">
+              <input id="radio-no_16" class="radio-custom" name="radio-group_15" type="radio" onclick="showGroup('')">
               <label for="radio-no_16" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_16" class="radio-custom"name="radio-group_15" type="radio">
+              <input id="radio-yes_16" class="radio-custom"name="radio-group_15" type="radio" onclick="showGroup('group_15')">
               <label for="radio-yes_16" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -500,10 +500,10 @@
             <h8>Have you set clear limits on what third parties or partners can do with that information?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_17" class="radio-custom" name="radio-group_16" type="radio">
+              <input id="radio-no_17" class="radio-custom" name="radio-group_16" type="radio" onclick="showGroup('group_16')">
               <label for="radio-no_17" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_17" class="radio-custom"name="radio-group_16" type="radio">
+              <input id="radio-yes_17" class="radio-custom"name="radio-group_16" type="radio" onclick="showGroup('')">
               <label for="radio-yes_17" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -515,10 +515,10 @@
             <h8>Will the device receive advertising messages from third parties?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_18" class="radio-custom" name="radio-group_17" type="radio">
+              <input id="radio-no_18" class="radio-custom" name="radio-group_17" type="radio" onclick="showGroup('')">
               <label for="radio-no_18" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_18" class="radio-custom"name="radio-group_17" type="radio">
+              <input id="radio-yes_18" class="radio-custom"name="radio-group_17" type="radio" onclick="showGroup('group_17')">
               <label for="radio-yes_18" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -530,10 +530,10 @@
             <h8>Will the microphone in the device have a physical switch?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_19" class="radio-custom" name="radio-group_18" type="radio">
+              <input id="radio-no_19" class="radio-custom" name="radio-group_18" type="radio" onclick="showGroup('group_18')">
               <label for="radio-no_19" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_19" class="radio-custom"name="radio-group_18" type="radio">
+              <input id="radio-yes_19" class="radio-custom"name="radio-group_18" type="radio" onclick="showGroup('')">
               <label for="radio-yes_19" class="radio-custom-label">Yes</label>
             </div>
           </div>
@@ -561,7 +561,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="sustainability">
-    <h3 class="text-center mt-2">Sustainability</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('sustainability')"><i class="fas fa-times float-left"></i> </a> Sustainability</h3>
     <div class="divider"></div>
     <div id="consider-carousel_05" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -573,11 +573,11 @@
             <h8>Are the devices reusable? How will they be disposed of otherwise?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_19" class="radio-custom" name="radio-group_19" type="radio">
-              <label for="radio-no_19" class="radio-custom-label">No</label>
+              <input id="radio-no_20" class="radio-custom" name="radio-group_20" type="radio"  onclick="showGroup('group_20')">
+              <label for="radio-no_20" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_19" class="radio-custom"name="radio-group_19" type="radio">
-              <label for="radio-yes_19" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_20" class="radio-custom"name="radio-group_20" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_20" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -588,11 +588,11 @@
             <h8>Will the servers providing remote functionalities keep functioning for the lifetime of the product?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_20" class="radio-custom" name="radio-group_20" type="radio">
-              <label for="radio-no_20" class="radio-custom-label">No</label>
+              <input id="radio-no_21" class="radio-custom" name="radio-group_21" type="radio" onclick="showGroup('group_21')">
+              <label for="radio-no_21" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_20" class="radio-custom"name="radio-group_20" type="radio">
-              <label for="radio-yes_20" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_21" class="radio-custom"name="radio-group_21" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_21" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -617,7 +617,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="safety-security">
-    <h3 class="text-center mt-2">Safety & Security</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('safety-security')"><i class="fas fa-times float-left"></i> </a> Safety & Security</h3>
     <div class="divider"></div>
     <div id="consider-carousel_06" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -629,11 +629,11 @@
             <h8>Will the device receive software updates for the lifetime of the product?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_21" class="radio-custom" name="radio-group_21" type="radio">
-              <label for="radio-no_21" class="radio-custom-label">No</label>
+              <input id="radio-no_22" class="radio-custom" name="radio-group_22" type="radio" onclick="showGroup('group_22')">
+              <label for="radio-no_22" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_21" class="radio-custom"name="radio-group_21" type="radio">
-              <label for="radio-yes_21" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_22" class="radio-custom"name="radio-group_22" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_22" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -644,11 +644,11 @@
             <h8>Is there a unique user name and password for each user/device?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_22" class="radio-custom" name="radio-group_22" type="radio">
-              <label for="radio-no_22" class="radio-custom-label">No</label>
+              <input id="radio-no_23" class="radio-custom" name="radio-group_23" type="radio" onclick="showGroup('group_23')">
+              <label for="radio-no_23" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_22" class="radio-custom"name="radio-group_22" type="radio">
-              <label for="radio-yes_22" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_23" class="radio-custom"name="radio-group_23" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_23" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -659,11 +659,11 @@
             <h8>Is there a point of contact to report security vulnerabilities?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_23" class="radio-custom" name="radio-group_23" type="radio">
-              <label for="radio-no_23" class="radio-custom-label">No</label>
+              <input id="radio-no_24" class="radio-custom" name="radio-group_24" type="radio"  onclick="showGroup('group_24')">
+              <label for="radio-no_24" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_23" class="radio-custom"name="radio-group_23" type="radio">
-              <label for="radio-yes_23" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_24" class="radio-custom"name="radio-group_24" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_24" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -674,11 +674,11 @@
             <h8>Will you ensure the security of the data transmission?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_24" class="radio-custom" name="radio-group_24" type="radio">
-              <label for="radio-no_24" class="radio-custom-label">No</label>
+              <input id="radio-no_25" class="radio-custom" name="radio-group_25" type="radio" onclick="showGroup('group_25')">
+              <label for="radio-no_25" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_24" class="radio-custom"name="radio-group_24" type="radio">
-              <label for="radio-yes_24" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_25" class="radio-custom"name="radio-group_25" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_25" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -689,11 +689,11 @@
             <h8>Can you ensure that vulnerable users are not reached by strangers using the device?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_25" class="radio-custom" name="radio-group_25" type="radio">
-              <label for="radio-no_25" class="radio-custom-label">No</label>
+              <input id="radio-no_26" class="radio-custom" name="radio-group_26" type="radio" onclick="showGroup('group_26')">
+              <label for="radio-no_26" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_25" class="radio-custom"name="radio-group_25" type="radio">
-              <label for="radio-yes_25" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_26" class="radio-custom"name="radio-group_26" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_26" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -721,7 +721,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="openness">
-    <h3 class="text-center mt-2">Openness</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('openness')"><i class="fas fa-times float-left"></i> </a> Openness</h3>
     <div class="divider"></div>
     <div id="consider-carousel_07" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -733,11 +733,11 @@
             <h8>Will the device allow for third party add-ons or user re-programming?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_26" class="radio-custom" name="radio-group_26" type="radio">
-              <label for="radio-no_26" class="radio-custom-label">No</label>
+              <input id="radio-no_27" class="radio-custom" name="radio-group_27" type="radio" onclick="showGroup('')">
+              <label for="radio-no_27" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_26" class="radio-custom"name="radio-group_26" type="radio">
-              <label for="radio-yes_26" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_27" class="radio-custom"name="radio-group_27" type="radio" onclick="showGroup('group_27')">
+              <label for="radio-yes_27" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -748,11 +748,11 @@
             <h8>Will the software in the device be open source?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_27" class="radio-custom" name="radio-group_27" type="radio">
-              <label for="radio-no_27" class="radio-custom-label">No</label>
+              <input id="radio-no_28" class="radio-custom" name="radio-group_28" type="radio" onclick="showGroup('')">
+              <label for="radio-no_28" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_27" class="radio-custom"name="radio-group_27" type="radio">
-              <label for="radio-yes_27" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_28" class="radio-custom"name="radio-group_28" type="radio" onclick="showGroup('group_28')">
+              <label for="radio-yes_28" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -777,7 +777,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="wellbeing">
-    <h3 class="text-center mt-2">Wellbeing</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('wellbeing')"><i class="fas fa-times float-left"></i> </a> Wellbeing</h3>
     <div class="divider"></div>
     <div id="consider-carousel_08" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -789,11 +789,11 @@
             <h8>Do you allow for comparisons among users?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_275" class="radio-custom" name="radio-group_275" type="radio">
-              <label for="radio-no_275" class="radio-custom-label">No</label>
+              <input id="radio-no_29" class="radio-custom" name="radio-group_29" type="radio" onclick="showGroup('')">
+              <label for="radio-no_29" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_275" class="radio-custom"name="radio-group_275" type="radio">
-              <label for="radio-yes_275" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_29" class="radio-custom"name="radio-group_29" type="radio"  onclick="showGroup('group_29')">
+              <label for="radio-yes_29" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -803,7 +803,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="transparency">
-    <h3 class="text-center mt-2">Transparency</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('transparency')"><i class="fas fa-times float-left"></i> </a> Transparency</h3>
     <div class="divider"></div>
     <div id="consider-carousel_09" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -815,11 +815,11 @@
             <h8>Does the device display any sign when recording video and/or audio in its surroundings?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_28" class="radio-custom" name="radio-group_28" type="radio">
-              <label for="radio-no_28" class="radio-custom-label">No</label>
+              <input id="radio-no_30" class="radio-custom" name="radio-group_30" type="radio" onclick="showGroup('group_30')">
+              <label for="radio-no_30" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_28" class="radio-custom"name="radio-group_28" type="radio">
-              <label for="radio-yes_28" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_30" class="radio-custom"name="radio-group_30" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_30" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -830,11 +830,11 @@
             <h8>Has information about the logic of data processing been provided to users?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_29" class="radio-custom" name="radio-group_29" type="radio">
-              <label for="radio-no_29" class="radio-custom-label">No</label>
+              <input id="radio-no_31" class="radio-custom" name="radio-group_31" type="radio" onclick="showGroup('group_31')">
+              <label for="radio-no_31" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_29" class="radio-custom"name="radio-group_29" type="radio">
-              <label for="radio-yes_29" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_31" class="radio-custom"name="radio-group_31" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_31" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -845,11 +845,11 @@
             <h8>Has any information been provided about the project to the interested persons or to the public at large?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_30" class="radio-custom" name="radio-group_30" type="radio">
-              <label for="radio-no_30" class="radio-custom-label">No</label>
+              <input id="radio-no_32" class="radio-custom" name="radio-group_32" type="radio"  onclick="showGroup('group_32')">
+              <label for="radio-no_32" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_30" class="radio-custom"name="radio-group_30" type="radio">
-              <label for="radio-yes_30" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_32" class="radio-custom"name="radio-group_32" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_32" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -860,11 +860,11 @@
             <h8>Has the project adopted any procedure to give the opportunity to persons to ask information about the project?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_31" class="radio-custom" name="radio-group_31" type="radio">
-              <label for="radio-no_31" class="radio-custom-label">No</label>
+              <input id="radio-no_33" class="radio-custom" name="radio-group_33" type="radio" onclick="showGroup('group_33')">
+              <label for="radio-no_33" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_31" class="radio-custom"name="radio-group_31" type="radio">
-              <label for="radio-yes_31" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_33" class="radio-custom"name="radio-group_33" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_33" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -890,7 +890,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="participation">
-    <h3 class="text-center mt-2">Participation</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('participation')"><i class="fas fa-times float-left"></i> </a> Participation</h3>
     <div class="divider"></div>
     <div id="consider-carousel_10" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -902,11 +902,11 @@
             <h8>Have you planned to engage stakeholders in the project development?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_32" class="radio-custom" name="radio-group_32" type="radio">
-              <label for="radio-no_32" class="radio-custom-label">No</label>
+              <input id="radio-no_34" class="radio-custom" name="radio-group_34" type="radio" onclick="showGroup('group_34')">
+              <label for="radio-no_34" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_32" class="radio-custom"name="radio-group_32" type="radio">
-              <label for="radio-yes_32" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_34" class="radio-custom"name="radio-group_34" type="radio" onclick="showGroup('')">
+              <label for="radio-yes_34" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -916,7 +916,7 @@
 
   <!-- pop up -->
   <div class="pop-up" id="inclusion-equality">
-    <h3 class="text-center mt-2">Inclusion & Equality</h3>
+    <h3 class="text-center mt-2"> <a onclick="closePopUP('inclusion-equality')"><i class="fas fa-times float-left"></i> </a> Inclusion & Equality</h3>
     <div class="divider"></div>
     <div id="consider-carousel_11" class="carousel slide" data-ride="carousel" data-interval="false">
       
@@ -928,11 +928,11 @@
             <h8>Will the device be used to potentially restrict services to users or groups that are deemed uneconomical?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_33" class="radio-custom" name="radio-group_33" type="radio">
-              <label for="radio-no_33" class="radio-custom-label">No</label>
+              <input id="radio-no_35" class="radio-custom" name="radio-group_35" type="radio" onclick="showGroup('')">
+              <label for="radio-no_35" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_33" class="radio-custom" name="radio-group_33" type="radio">
-              <label for="radio-yes_33" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_35" class="radio-custom" name="radio-group_35" type="radio" onclick="showGroup('group_35')">
+              <label for="radio-yes_35" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -943,11 +943,11 @@
             <h8>Will data collected be used to influence socio-economic policies that may be detrimental to certain people, even if others benefit?</h8>
           
             <div id="radio-btns" class="mt-2">
-              <input id="radio-no_34" class="radio-custom" name="radio-group_34" type="radio">
-              <label for="radio-no_34" class="radio-custom-label">No</label>
+              <input id="radio-no_36" class="radio-custom" name="radio-group_36" type="radio" onclick="showGroup('')">
+              <label for="radio-no_36" class="radio-custom-label">No</label>
 
-              <input id="radio-yes_34" class="radio-custom"name="radio-group_34" type="radio">
-              <label for="radio-yes_34" class="radio-custom-label">Yes</label>
+              <input id="radio-yes_36" class="radio-custom"name="radio-group_36" type="radio" onclick="showGroup('group_36')">
+              <label for="radio-yes_36" class="radio-custom-label">Yes</label>
             </div>
           </div>
         </div>
@@ -998,8 +998,392 @@
       </div>
     </div>
   </div>
+  
+  <canvas id="c" width="1280" height="640" margin-bottom></canvas>
 
-  <canvas id="c" width="1440" height="640" margin-bottom></canvas>
+  <div class="row no-margin" id="review-issues">
+    <div class="col-10 offset-1">
+      <h3>These are the answers for the most challenging ethical and social impact. These are not grades, not approvals nor, disapprovals. They are indications of where you can re-think, align better with your values and accompanying tools that we hope will help you. Consider which one you will focus on. </h3>
+    </div>
+
+    <div class="col-10 offset-1 consider-divider mt-3"></div>
+      <div class="row">
+      <div class="col-7 mt-5">
+        
+        <div class="row no-margin mb-3" id="consider-dignity">
+          
+          <div class="col-11 offset-1"> 
+            <h1 class="text-left">Dignity</h1>
+            
+            <div id="group_01" class="mb-5 consider-group">
+              <h9 class="mt-2">Does the IoT device need to be implanted into the user’s body?</h9>
+              <h10 class="mt-2">You answered yes.</h10>
+              <h3 class="mt-2">Implants have notable security and privacy vulnerabilities. Implants can also require a lot of user feedback or input in order for the overall service to continue to function. Is this feasible, in all physical and mental health conditions? Can the user regulate the implant with any control? Will you present alternatives to implants or is this the only way in which they can benefit from your service? Do they have any option to choose the frequency the implant collects their internal and external data?</h3>
+            </div>
+
+            <div id="group_02" class="mb-5 consider-group">
+              <h9 class="mt-2">Is the IoT device able to transmit sensations to the user’s body (e.g. vibrations, sounds, etc.)?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Imagine that the user is constantly receiving these. How much stress, anxiety and distraction will it produce?</h3>
+            </div>
+
+            <div id="group_03" class="mb-5 consider-group">
+              <h9 class="mt-2">Could the device interfere or limit the normal functionality of the user’s body (e.g. exoskeletons)?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Imagine that the user can no longer move as they need to in moments of emergency. Will other body movement health issues be created by this interference?</h3>
+            </div>
+
+            <div id="group_04" class="mb-5 consider-group">
+              <h9 class="mt-2">Are the expectations of benefits realistic?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Can all users, irrespective of race, class, gender, sexuality, or disability, simply “occupy the role of the wellbeing expert” by possessing more data?</h3>
+            </div>
+
+            <div id="group_05" class="mb-5 consider-group">
+              <h9 class="mt-2">Will users be monitored in private areas such as bathrooms?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">This may go against the basic definition of dignity: "Avoiding any forms of surveillance or invasive control over individuals using IoT devices. IoT devices shall not be used to collect unauthorised private information or to publicly disclose private facts."</h3>
+            </div>
+
+            <div id="group_06" class="mb-5 consider-group">
+              <h9 class="mt-2">Will there be any spaces free of monitoring?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">This may go against the basic definition of dignity: "Avoiding any forms of surveillance or invasive control over individuals using IoT devices. IoT devices shall not be used to collect unauthorised private information or to publicly disclose private facts." How easy or difficult is it to turn off data collection at any moment?</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-non-discrimination">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Non-discrimination</h1>
+
+            <div id="group_07" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the system take into account any particular characteristics of the users when making any determination, such as age, gender or disability?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">How could this go wrong? If the system is taking into account these particular characteristics, are there users who will never be able to access the benefits of the system because they have been overly categorised? What about people that do not fit the categories, what will they have to do, to get the system to work for them? What if your system becomes used everywhere, what happens to people who do not fit your categories? What becomes the "wrong" thing to be?</h3>
+            </div>
+
+            <div id="group_08" class="mb-5 consider-group">
+              <h9 class="mt-2">Are the IoT device and associated software used for predictive purposes or classifying users according to their conditions, behaviour and preferences?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">"How could this go wrong? Could there be cases in which the prediction fails? How would that impact someone's life?For example: China is using A.I. to profile a minority: in a major ethical leap for the tech world, Chinese start-ups have built algorithms that the government uses to track members of a largely Muslim minority group.Amazon’s Rekognition software has been used by the police but returns inaccurate or biased results. This is made worse by the fact that Amazon claims there is an accuracy threshold that police should use for the use their system but the default is a much lower number and the police don't know that they should reset that threshold. "</h3>
+            </div>
+
+            <div id="group_09" class="mb-5 consider-group">
+              <h9 class="mt-2">Do you have measures in place to avoid discrimination?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Consider setting up a group to help you avoid discrimination with experts who understand why discrimination can occur through technology systems and how to mitigate that</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-autonomy">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Autonomy</h1>
+
+            <div id="group_10" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the device reduce individuals ability to make their own decisions?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Are you respecting the individual's wisdom about their life and considering the impact of your device's decisions over the long term? Is there a way for the individuals to understand how the decisions are made if these are made for them?</h3>
+            </div>
+
+            <div id="group_11" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the tool include some form of remote control?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">"Who controls the remote control? What are the impacts of that control? Can it create damage to the user or those surrounding the user?
+  If control is in the hands of a loved one, is it better to track your loved ones even though it may mean they are a) targeted or b) exposed in terms of their security or c) limited in their own definition of a good life? What about employees, dependents, people in unequal power relations?"</h3>
+            </div>
+
+            <div id="group_12" class="mb-5 consider-group">
+              <h9 class="mt-2">If any limitations to user control exist, do they happen in contexts characterised by power asymmetries (e.g. workplace)?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Imagine that the powerful person in the relation makes a choice that the less-powerful user finds extremely problematic. How can they move out of that space that the device has now created? Are there ways to identify and challenge problematic situations and decisions through or with the device?</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-responsibility">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Responsibility</h1>
+
+            <div id="group_13" class="mb-5 consider-group">
+              <h9 class="mt-2">Will there be a way to challenge any decisions made by the system?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Imagine if, for example, the user has a health issue and is no longer able to meet whatever thresholds the system expects. who has the power to set thresholds and how can people contest or adjust these?</h3>
+            </div>
+
+            <div id="group_14" class="mb-5 consider-group">
+              <h9 class="mt-2">Will there be clear lines of responsibility for any outcomes, particularly between the developers of the tools and the operators to ensure that any issues are always dealt with?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">How much of the system do you, the creators, have responsibility for? Has this been discussed and set out in legal terms? How can you be held to account by those that are harmed by your system?</h3>
+            </div>
+
+            <div id="group_15" class="mb-5 consider-group">
+              <h9 class="mt-2">Will there be a way to challenge any decisions on productivity, resource allocation or treatment made by the system?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Is it possible that some users - depending on their unique characteristics as humans - have different ways of being "productive" than the ones that your device recognises? Who sets the premises on which your system bases allocation decisions? Who is affected and can they assess allocation principles and contest them?</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-accountability">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Accountability</h1>
+
+            <div id="group_16" class="mb-5 consider-group">
+              <h9 class="mt-2">Will you be sharing personal data with third parties?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Imagine: the personal data is for a fitness monitoring device which gives health insurance benefits. Some users would be required to then constantly wear the device, no matter their disability or unwillingness to constantly wear the activity monitor. Who is left out, made to feel inadequate? What types of behavior does your device make invisible or visible?</h3>
+            </div>
+
+            <div id="group_17" class="mb-5 consider-group">
+              <h9 class="mt-2">Have you set clear limits on what third parties or partners can do with that information?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">The cases of misuse of data by third parties are endless. In order to be accountable to your users, you must understand and be as specific as possible about how their data is allowed to be used. You also may want to be clear about who is responsible should misuse occur, how to assess whether misuse is occurring and how to contest the fact of misuse.</h3>
+            </div>
+
+            <div id="group_18" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the device receive advertising messages from third parties?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">What are the impacts on the user of seeing or hearing these advertising messages over time? Will it be clear to the user that what they are seeing is targeted advertising? </h3>
+            </div>
+
+            <div id="group_19" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the microphone in the device have a physical switch?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">"There have been many cases of microphone sensors malfunctioning in the software and hardware. In that case, the microphone could be ""always on"" without the user knowing, which is a clear invasion of privacy.
+  For example: Google Home Mini was randomly and near-constantly recording sounds in his home and transmitting them to Google. The company acknowledged the problem and is issuing a software update to resolve the issue, which appears to boil down to a failure of the touch sensor on the top. That seems to be the rub (pardon the pun) with the Mini: it thought that somebody was holding its finger down on the top and so was randomly activating and recording. The good news is that the lights turned on to indicate it was listening, but the bad news is that it didn’t make an audible tone, so it took Artem Russakovski a trip through the Home’s search history to discover the error. How can you make potentially privacy invasive actions of your device be as obvious as possible?"</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-sustainability">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Sustainability</h1>
+
+            <div id="group_20" class="mb-5 consider-group">
+              <h9 class="mt-2">Are the devices reusable? How will they be disposed of otherwise?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">If sustainability is an important value, consider the after life of the product after the user has chosen to leave it. What happens if the device breaks? Can it be repaired and refurbished or must it be consigned to the landfill? Is it clear what can be re-used and what can not be? </h3>
+            </div>
+
+            <div id="group_21" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the servers providing remote functionalities keep functioning for the lifetime of the product?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">If the product depends on the servers, will the product become useless without the servers? How sustainable is the expectation of constant connectivity? Is there any functionality that does not depend on remote servers?</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-safety-security">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Safety & Security</h1>
+
+            <div id="group_22" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the device receive software updates for the lifetime of the product?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">In order to maintain the security of the device and make sure it is not vulnerable to attack, you will need to update the device - at least through the pair app. This can be challenging as users may not take the time or effort to update their app in the app store. It is the responsibility of the maker to at least provide updates with security patches.</h3>
+            </div>
+
+            <div id="group_23" class="mb-5 consider-group">
+              <h9 class="mt-2">Is there a unique user name and password for each user/device?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">This is a key security practice. </h3>
+            </div>
+
+            <div id="group_24" class="mb-5 consider-group">
+              <h9 class="mt-2">Is there a point of contact to report security vulnerabilities?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">This is a key security practice.</h3>
+            </div>
+
+            <div id="group_25" class="mb-5 consider-group">
+              <h9 class="mt-2">Will you ensure the security of the data transmission?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">If that data was carelessly stored, and then stolen through a data breach by a malicious third party and sold to unscrupulous organizations that want to use that data to assess your health risks, you could one day face steep increases in health insurance, or even a policy cancellation. The risk of this is so real that some companies are buying data breach insurance to protect themselves in the case of consumer information getting into the wrong hands.</h3>
+            </div>
+
+            <div id="group_26" class="mb-5 consider-group">
+              <h9 class="mt-2">Can you ensure that vulnerable users are not reached by strangers using the device?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">If that data was carelessly stored, and then stolen through a data breach by a malicious third party and sold to unscrupulous organizations that want to use that data to assess your health risks, you could one day face steep increases in health insurance, or even a policy cancellation. The risk of this is so real that some companies are buying data breach insurance to protect themselves in the case of consumer information getting into the wrong hands.</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-openness">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Openness</h1>
+
+            <div id="group_27" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the device allow for third party add-ons or user re-programming?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">How could this go wrong? What if third party add-ons are not in accordance with other values that you uphold, such as inclusion & equality? There can be cases where extremist viewpoints are added to "open" devices or platforms. How will you deal with that?</h3>
+            </div>
+
+            <div id="group_28" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the software in the device be open source?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">How could this go wrong? What if third party add-ons are not in accordance with other values that you uphold, such as inclusion & equality? There can be cases where extremist viewpoints are added to "open" devices or platforms. How will you deal with that?</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-wellbeing">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Wellbeing</h1>
+
+            <div id="group_29" class="mb-5 consider-group">
+              <h9 class="mt-2">Do you allow for comparisons among users?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">What if the comparisons drive competitive behavior to the extreme? Does that add to a sense of wellbeing? Check in with your definition of what wellbeing truly means.</h3>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row no-margin mb-3" id="consider-transparency">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Transparency</h1>
+
+            <div id="group_30" class="mb-5 consider-group">
+              <h9 class="mt-2">Does the device display any sign when recording video and/or audio in its surroundings?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">"Is it transparent not to tell the user about when they are being surveilled by the device? What if other non-primary users are present and did not consent to being surveilled?
+  Check in with the definition of transparency: ""Providing access to information concerning personal data processing. Encouraging transparency about data operations, device usage and firmware and software upgrades.""
+  For example: Google Home Mini was randomly and near-constantly recording sounds in his home and transmitting them to Google. The company acknowledged the problem and is issuing a software update to resolve the issue, which appears to boil down to a failure of the touch sensor on the top. That seems to be the rub (pardon the pun) with Russakovskii’s Mini: it thought that somebody was holding its finger down on the top and so was randomly activating and recording. The good news is that the lights turned on to indicate it was listening, but the bad news is that it didn’t make an audible tone, so it took a trip through the Home’s search history to discover the error."</h3>
+            </div>
+
+            <div id="group_31" class="mb-5 consider-group">
+              <h9 class="mt-2">Has information about the logic of data processing been provided to users?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">"How can they understand the decisions made based on data processing if they do not know about the logic of the data processing?
+  Check in with the definition of transparency: ""Providing access to information concerning personal data processing. Encouraging transparency about data operations, device usage and firmware and software upgrades."""</h3>
+            </div>
+
+            <div id="group_32" class="mb-5 consider-group">
+              <h9 class="mt-2">Has any information been provided about the project to the interested persons or to the public at large?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Check in with the definition of transparency: "Providing access to information concerning personal data processing. Encouraging transparency about data operations, device usage and firmware and software upgrades."</h3>
+            </div>
+
+            <div id="group_33" class="mb-5 consider-group">
+              <h9 class="mt-2">Has the project adopted any procedure to give the opportunity to persons to ask information about the project?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Check in with the definition of transparency: "Providing access to information concerning personal data processing. Encouraging transparency about data operations, device usage and firmware and software upgrades."</h3>
+            </div>
+
+          </div>
+        </div>
+
+      <div class="row no-margin mb-3" id="consider-participation">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Participation</h1>
+
+            <div id="group_34" class="mb-5 consider-group">
+              <h9 class="mt-2">Have you planned to engage stakeholders in the project development?</h9>
+              <h10 class="mt-2">You answered No.</h10>
+              <h3 class="mt-2">Participation takes into account effectively engaging data subjects in data processing design and promoting debate and dialogue. Consider creating stakeholder workshops where you open up about the project development in terms of the key areas to which they can contribute.</h3>
+            </div>
+          </div>
+        </div>
+
+      <div class="row no-margin mb-3" id="consider-inclusion-equality">
+          <div class="col-11 offset-1"> 
+            <div class="mb-4 consider-divider"></div>
+            <h1 class="text-left">Inclusion & Equality</h1>
+
+            <div id="group_35" class="mb-5 consider-group">
+              <h9 class="mt-2">Will the device be used to potentially restrict services to users or groups that are deemed uneconomical?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">Limiting the device to only those who will bring profit calls into question the principle of being inclusive or equal. </h3>
+            </div>
+
+            <div id="group_36" class="mb-5 consider-group">
+              <h9 class="mt-2">Will data collected be used to influence socio-economic policies that may be detrimental to certain people, even if others benefit?</h9>
+              <h10 class="mt-2">You answered Yes.</h10>
+              <h3 class="mt-2">"Imagine if the policy were based on falsified data - either because some point in your system broke or because users found loopholes in the device and used those to their own benefit
+  For example: China is using A.I. to profile a minority: in a major ethical leap for the tech world, Chinese start-ups have built algorithms that the government uses to track members of a largely Muslim minority group.
+  Amazon’s Rekognition software has been used by the police but returns inaccurate or biased results."</h3>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      
+
+      <div class="col-5">
+        <div class="row no-margin mt-5">
+          <div class="col-3">
+           <img src="img/state.svg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="col-8">
+            <h7>State</h7>
+            <p class="small-print mt-2">Gather your team to articulate your ethical values as individuals and as a group in relation to your product development.</p>
+            <p class="fine-print mt-2">Use at the beginning of product development. <br>Takes around 30 minutes.</p>
+          </div>
+
+        </div>
+
+        <div class="row no-margin mt-5">
+          <div class="col-3">
+           <img src="img/world.svg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="col-8">
+            <h7>What If Everyone In the World?</h7>
+            <p class="small-print mt-2">Work out the implications of your ethical challenges, assessing the roots of the challenge and ideating options to address the challenge.</p>
+            <p class="fine-print mt-2">Use when trying to understand why a given decision has ethical dimensions. <br> Takes  45 minutes to an hour.</p>
+          </div>
+        </div>
+
+        <div class="row no-margin mt-5">
+          <div class="col-3">
+           <img src="img/mapping.svg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="col-8">
+            <h7>Mapping options</h7>
+            <p class="small-print mt-2">Facilitate a discussion and evaluation of different ideas you came up with when working through the ethical challenges and/or WIEITW.</p>
+            <p class="fine-print mt-2">Use when assessing solutions.<br>Takes around 30 minutes</p>
+          </div>
+        </div>
+
+        <div class="row no-margin mt-5">
+          <div class="col-3">
+           <img src="img/reflect.svg" class="img-fluid" alt="Responsive image">
+          </div>
+
+          <div class="col-8">
+            <h7>Reflect on your values</h7>
+            <p class="small-print mt-2">Checking in with your "North Stars" - the values that you had identified at the beginning of your ethical stack - and being realistic about how well you can align with them.</p>
+            <p class="fine-print mt-2">Use as a periodic check-in during the process of product development.<br>Takes around 20 minutes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

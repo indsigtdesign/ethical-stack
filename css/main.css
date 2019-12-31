@@ -28,6 +28,7 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
 }
 
 /*
@@ -119,8 +120,9 @@ textarea {
   position: absolute !important;
   top: 260px !important;
   left: 50% !important;
-  margin-left: -720px;
+  margin-left: -640px;
   cursor: default !important;
+  transition: all 1s ease;
 }
 
 .no-padding{
@@ -139,11 +141,32 @@ textarea {
   color: #FFFFFF;
 }
 
+h10{
+  color: #8f8f8f;
+  font-family: tablet-gothic;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  width: 100%;
+  display: block;
+}
+
+h9{
+  font-family: tablet-gothic;
+  font-weight: 700;
+  font-size: 22px;
+  color: #4d4d4d;
+  width: 100%;
+  display: block;
+}
+
 h8{
   font-family: tablet-gothic;
   font-weight: 700;
   font-size: 16px;
   text-align: center; 
+  width: 100%;
+  display: block;
 }
 
 h7{
@@ -551,6 +574,13 @@ fieldset[disabled] .main-btn.active {
   margin-left: 5%;
 }
 
+.consider-divider{
+  display: block;
+  background-color: #979797;
+  width: 100%;
+  height: 1px;
+}
+
 .radio-custom {
     opacity: 0;
     position: absolute;   
@@ -655,6 +685,36 @@ fieldset[disabled] .main-btn.active {
   margin-left: auto;
 }
 
+#review_margin{
+  transition: all 1s ease;
+  margin-bottom: 0px;
+  /*margin-bottom: 275px;*/
+}
+
+#review-issues, #consider-dignity, #consider-non-discrimination, #consider-autonomy, #consider-responsibility, #consider-accountability, #consider-sustainability, #consider-safety-security, #consider-openness, #consider-wellbeing, #consider-transparency, #consider-participation, #consider-inclusion-equality{
+  transition: all 1s ease;
+  display: none;
+  opacity: 0;
+}
+
+.consider-group{
+  display: none;
+}
+
+.fa-times {
+  margin-top: 5px;
+  color: #8F8F8F;
+}
+
+a .fa-times:hover{
+  color: black;
+}
+
+.pop-up h3{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ==========================================================================
    Helper classes

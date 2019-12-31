@@ -117,6 +117,23 @@ var valuesTxt = ["Privacy","Participation","Accountability","Autonomy","Responsi
 
 var problem_values = ["dignity","non-discrimination","autonomy","responsibility","accountability","sustainability","safety-security","openness","wellbeing","transparency","participation","inclusion-equality"]
 
+var amount_questions = {
+	"dignity":6,
+	"non-discrimination":3,
+	"autonomy":3,
+	"responsibility":3,
+	"accountability":4,
+	"sustainability":2,
+	"safety-security":5,
+	"openness":2,
+	"wellbeing":1,
+	"transparency":4,
+	"participation":1,
+	"inclusion-equality":2
+}
+
+var amount_answered = 0;
+
 var selected_values = [];
 
 var valuesGroup = new fabric.Group();
@@ -315,7 +332,6 @@ function generate_tile(tile, circle, group, id, text, isActive) {
       org_left: group.left
     })
 
-    //console.log("rgb("+convertHex(circle.fill)+") 2px 2px");
     group.setShadow("0px 0px 0px rgb("+convertHex(circle.fill)+")");
     
   	canvas.add(group);
@@ -1014,7 +1030,8 @@ function expose_the_stack(){
 
   for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
   	if (selected_values.indexOf(canvas.getObjects()[5].getObjects()[i].id) != -1) {
-  		console.log(canvas.getObjects()[5].getObjects()[i].id +" : " + canvas.getObjects()[5].getObjects()[i].type);
+  		amount_answered += amount_questions[canvas.getObjects()[5].getObjects()[i].id];
+
   		if (canvas.getObjects()[5].getObjects()[i].type == "textbox") {
   			canvas.getObjects()[5].getObjects()[i].set({
   				fill:"#2D9DD7",
@@ -1044,6 +1061,29 @@ function expose_the_stack(){
 
 
   state++;
+  amount_answered = amount_answered/2
+  console.log(amount_answered)
+}
+
+function review_issues() {
+	document.getElementById("expose").classList.add("disabled");
+	document.getElementById("review").classList.remove("pulse");
+	document.getElementById("review").removeEventListener("click", review_issues)
+
+	for (var i = 0; i < problem_values.length; i++) {
+		document.getElementById(problem_values[i]).style.display = "none";
+	}
+
+	document.getElementById('the-description').innerHTML = "You’re done!"
+	$("#review_margin").css("margin-bottom","185px");
+	$(".canvas-container").css("margin-top","-100px");
+	$("#review-issues").css("display","inline-block");
+	setTimeout(function(){
+	  $("#review-issues").css("opacity","1");
+	}, 1000);
+	
+	
+
 }
 
 function goToNextStep() {
@@ -1059,6 +1099,13 @@ function goToNextStep() {
     document.getElementById("expose").classList.remove("disabled");
     document.getElementById("expose").classList.add("pulse");
     document.getElementById("expose").addEventListener("click", expose_the_stack)
+  }
+
+  if (state == 3) {
+  	document.getElementById("number3").innerHTML = "✓";
+    document.getElementById("review").classList.remove("disabled");
+    document.getElementById("review").classList.add("pulse");
+    document.getElementById("review").addEventListener("click", review_issues)
   }
 }
   
@@ -1306,7 +1353,98 @@ function isReady() {
 	}
 }
 
+function closePopUP(id) {
+	$("#"+id).css("display","none");
+}
+
 $(document).ready(function() {
     $('.carousel').carousel('pause');
 });
+
+function showGroup(group) {
+	--amount_answered;
+
+	if (amount_answered <= 0) {
+		goToNextStep()
+	}
+
+	if (group != "") {
+		$("#"+group).css("display","block");
+		var num = group.replace('group_','');
+		num = parseInt(num)
+		console.log(num);
+
+		if (num >= 0 && num <= 6) {
+			$("#consider-dignity").css("display","block");
+			$("#consider-dignity").css("opacity","1");
+		}
+
+		if (num >= 7 && num <= 9) {
+			$("#consider-non-discrimination").css("display","block");
+			$("#consider-non-discrimination").css("opacity","1");
+		}
+
+		if (num >= 10 && num <= 12) {
+			$("#consider-autonomy").css("display","block");
+			$("#consider-autonomy").css("opacity","1");
+		}
+
+		if (num >= 13 && num <= 15) {
+			$("#consider-responsibility").css("display","block");
+			$("#consider-responsibility").css("opacity","1");
+		}
+
+		if (num >= 16 && num <= 19) {
+			$("#consider-accountability").css("display","block");
+			$("#consider-accountability").css("opacity","1");
+
+		}
+
+		if (num >= 20 && num <= 21) {
+			$("#consider-sustainability").css("display","block");
+			$("#consider-sustainability").css("opacity","1");
+		}
+
+		if (num >= 22 && num <= 26) {
+			$("#consider--safety-security").css("display","block");
+			$("#consider--safety-security").css("opacity","1");
+		}
+
+		if (num >= 27 && num <= 28) {
+			$("#consider-openness").css("display","block");
+			$("#consider-openness").css("opacity","1");
+		}
+
+		if (num == 29) {
+			$("#consider-wellbeing").css("display","block");
+			$("#consider-wellbeing").css("opacity","1");
+		}
+
+		if (num >= 30 && num <= 33) {
+			$("#consider-transparency").css("display","block");
+			$("#consider-transparency").css("opacity","1");
+		}
+
+		if (num == 34) {
+			$("#consider-participation").css("display","block");
+			$("#consider-participation").css("opacity","1");
+		}
+
+		if (num >= 35 && num <= 36) {
+			$("#consider-inclusion-equality").css("display","block");
+			$("#consider-inclusion-equality").css("opacity","1");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
