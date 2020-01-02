@@ -446,7 +446,7 @@ fieldset[disabled] .main-btn.active {
   margin-right: 20px;
 }
 
-.modal-dialog {
+.modal-dialog-fix {
   position: absolute;
   top: 165px;
   left: 30px;
@@ -465,7 +465,7 @@ fieldset[disabled] .main-btn.active {
   overflow: auto;
 }
 
-.modal-backdrop {
+.modal-backdrop-none {
   background-color: rgba(0,0,0,0);
 }
 

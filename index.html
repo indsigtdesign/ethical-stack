@@ -85,7 +85,9 @@
 
   <div class="row no-margin">
     <div class="col-4 offset-4 mt-4">
-      <a href="stack.html" class="btn main-btn btn-lg btn-block">Get Started</a>
+      <button type="button" class="btn main-btn btn-lg btn-block" data-toggle="modal" data-target="#beforeWeBegin">
+    Get Started
+  </button>
     </div>
   </div> 
 
@@ -126,7 +128,9 @@
 
   <div class="row no-margin">
     <div class="col-4 offset-4 mt-4">
-      <a href="stack.html" class="btn main-btn btn-lg btn-block">Get Started</a>
+      <button type="button" class="btn main-btn btn-lg btn-block" data-toggle="modal" data-target="#beforeWeBegin">
+    Get Started
+  </button>
     </div>
   </div>  
 
@@ -142,7 +146,25 @@
     </div>
   </div>
 
-
+  <!-- Modal -->
+    <div class="modal fade" id="beforeWeBegin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">One small thing</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Before we begin there's a couple of things that we would like you to consider!
+          </div>
+          <div class="modal-footer">
+            <a href="stack.html" class="btn main-btn btn-lg btn-block">I understand</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
