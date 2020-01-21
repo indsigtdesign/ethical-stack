@@ -1,3 +1,19 @@
+// Your web app's Firebase configuration
+var firebaseConfig = {
+	apiKey: "AIzaSyCiKndy9w8XDU3IYWu1U2VcZKrHJA0ymMc",
+	authDomain: "ethicalstack.firebaseapp.com",
+	databaseURL: "https://ethicalstack.firebaseio.com",
+	projectId: "ethicalstack",
+	storageBucket: "ethicalstack.appspot.com",
+	messagingSenderId: "395768768391",
+	appId: "1:395768768391:web:18bbc5507291c08e2c9522",
+	measurementId: "G-F12VNREG9D"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
 //Setting for canvas
 var canvas = new fabric.Canvas('c', { 
   selection: false
