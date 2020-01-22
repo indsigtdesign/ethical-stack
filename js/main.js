@@ -781,7 +781,7 @@ function spread_the_stack() {
   state++;
   document.getElementById('modal-header').innerHTML = "ENABLE YOUR VALUES" 
   document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to elements in your stack.<br>Connect values to all elements."
-  document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
+  document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission if these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
   $('#modal').modal('show')
   document.getElementById("map").classList.remove("pulse");
   document.getElementById("create").classList.add("disabled");
@@ -1028,6 +1028,9 @@ function expose_the_stack(){
 
   for (var i = 0; i < canvas.getObjects().length; i++) {
     if (canvas.getObjects()[i].type == "line") {
+    	canvas.getObjects()[i].set({
+        	opacity: .1
+    	});   //fade all items in the canvas except for value questions
       if (theProduct[canvas.getObjects()[i].to]) {
         theProduct[canvas.getObjects()[i].to].push(canvas.getObjects()[i].from)
       } else {
@@ -1040,7 +1043,7 @@ function expose_the_stack(){
     for (var e = 0; e < stack[i].getObjects().length; e++) {
       if (stack[i].getObjects()[e].type == "group") {
         stack[i].getObjects()[e].animate({
-          opacity: 0.5
+          opacity: 0.1 //fade all items in the canvas except for value questions
         },{
           duration: 250,
           onChange: canvas.renderAll.bind(canvas),
@@ -1072,6 +1075,37 @@ function expose_the_stack(){
   		}
   	}
   }
+
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[4].getObjects().length; i++) {
+		canvas.getObjects()[4].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[3].getObjects().length; i++) {
+		canvas.getObjects()[3].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[2].getObjects().length; i++) {
+		canvas.getObjects()[2].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[1].getObjects().length; i++) {
+		canvas.getObjects()[1].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[0].getObjects().length; i++) {
+		canvas.getObjects()[0].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
 
   for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
   	try{
