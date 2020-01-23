@@ -9,6 +9,8 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
   <!-- Place favicon.ico in the root directory -->
   <script src="https://kit.fontawesome.com/ff66c49fff.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -38,6 +40,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
       <img src="./img/logo.svg" width="127" height="46" alt="">
+      <span id="top">beta</span>
     </a>
     
     <ul class="navbar-nav  ml-auto">
@@ -1383,17 +1386,23 @@
       </div>
     </div>
         <div class="row no-margin" style="padding-bottom: 5rem; background-color:#EAEAEA">
-          <div class="col-4 offset-2">
+          <div class="col-3 offset-15">
             <h4 class="mt-6" onclick="printFunction()">Keep your work!</h4>
             <p>
-              <a href="" onclick="printFunction()">Print this page</a> to keep a record of the state of your stack and continue to solve these ethical challenges! We don't save your data.</p> 
+              We don't save your data. <br><a href="" onclick="printFunction()" target="blank">Print this page</a> to keep a record of the state of your stack and continue to solve these ethical challenges!</p> 
           </div>
 
-          <div class="col-4 ml-4">
+          <div class="col-3">
             <h4 class="mt-6">What else?</h4>
             <p>Check out the tools for handling your challenges <a href="#tools">⤴</a></p>     
-            <p>Get some <a href="resources.html#valueclashes">value clashes</a> - even more ethical dilemmas for you to consider.</a></p>     
-            <p>Learn <a href="about.html" target="blank">about the project.</a></p>      
+            <p>Get some <a href="resources.html#valueclashes" target="blank">value clashes</a> - even more ethical dilemmas for you to consider.</a></p>     
+            <p>Learn <a href="about.html" target="blank">about the project.</a></p>
+          </div>
+
+          <div class="col-3">
+            <h4 class="mt-6">Beta Feedback</h4>
+            <p>This is a prototype - a preliminary version of an experience from which other forms are developed.</p>
+            <p>We know a lot doesn't work (see <a href="blogpost">our post</a> on that). If you enjoyed the experience, <a href="mailto:a.berner@ciid.dk">let us know!</a></p>        
           </div>
           
         </div>

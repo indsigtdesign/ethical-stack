@@ -780,7 +780,7 @@ function spread_the_stack() {
 
   state++;
   document.getElementById('modal-header').innerHTML = "ENABLE YOUR VALUES" 
-  document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to elements in your stack.<br>Connect values to all elements."
+  document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to relevant elements in your stack."
   document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission if these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
   $('#modal').modal('show')
   document.getElementById("map").classList.remove("pulse");
@@ -1013,7 +1013,7 @@ function expose_the_stack(){
   document.getElementById('modal-header').innerHTML = "CONSIDER" 
   document.getElementById('the-description').innerHTML = "Uncover questions by clicking on the blue highlighted values." 
 
-  document.getElementById('modal-text').innerHTML = "In this third stage, we have found questions that will challenge how well you embed your values in your product.<br><br>Why? <br><br>The values that are important to you clearly ripple through the product's functionality. So each value is hereby questioned, and your answers will determine whether your product has a rock-solid or shaky ethical foundation. We will identify the answers that have the most risk from an ethical and social point of view. Risk can be in terms of possible harm to your users, to your own values and therefore your company's foundation and team, or to your overall public reputation and relations.<br><br>These areas do not cover all of the possible issues you may have. If you want to go through all of the issues, use our full-blown privacy, ethical and social impact assessment questionnaire: ";
+  document.getElementById('modal-text').innerHTML = "You've mapped your product in relation to your ethical values. In this third stage, we challenge how you understand those values.<br><br>Why? <br><br>The values that are important to you ripple through the product's functionality, so if any are shaky, it will shake the whole stack. We question each value and your answers will determine whether your product has a rock-solid or shaky ethical foundation. We will identify the answers that have the most risk from an ethical and social point of view. Risk can be in terms of possible harm to your users, to your own values and therefore your company's foundation and team, or to your overall public reputation and relations.<br><br>These areas do not cover all of the possible issues you may have. If you want to go through all of the issues, use our full-blown privacy, ethical and social impact assessment questionnaire: ";
   var newlink = document.createElement('a');
   	var linkname = document.createTextNode("VIRT-EU PESIA");
   	newlink.appendChild(linkname);
