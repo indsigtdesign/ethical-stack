@@ -918,3 +918,11 @@ a .fa-times:hover{
 .offset-15 {
     margin-left: 12.499995%;
 }
+#top{
+    color: #ffffff;
+    margin-top: 14px;
+    margin-left: 8px;
+    position: absolute;
+    font-weight: 100;
+    font-family: tablet-gothic;
+  }

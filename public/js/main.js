@@ -1,19 +1,3 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-	apiKey: "AIzaSyCiKndy9w8XDU3IYWu1U2VcZKrHJA0ymMc",
-	authDomain: "ethicalstack.firebaseapp.com",
-	databaseURL: "https://ethicalstack.firebaseio.com",
-	projectId: "ethicalstack",
-	storageBucket: "ethicalstack.appspot.com",
-	messagingSenderId: "395768768391",
-	appId: "1:395768768391:web:18bbc5507291c08e2c9522",
-	measurementId: "G-F12VNREG9D"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
 //Setting for canvas
 var canvas = new fabric.Canvas('c', { 
   selection: false
@@ -796,8 +780,8 @@ function spread_the_stack() {
 
   state++;
   document.getElementById('modal-header').innerHTML = "ENABLE YOUR VALUES" 
-  document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to elements in your stack.<br>Connect values to all elements."
-  document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
+  document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to relevant elements in your stack."
+  document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission if these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
   $('#modal').modal('show')
   document.getElementById("map").classList.remove("pulse");
   document.getElementById("create").classList.add("disabled");
@@ -1029,7 +1013,7 @@ function expose_the_stack(){
   document.getElementById('modal-header').innerHTML = "CONSIDER" 
   document.getElementById('the-description').innerHTML = "Uncover questions by clicking on the blue highlighted values." 
 
-  document.getElementById('modal-text').innerHTML = "In this third stage, based on your values and materials, we present a few questions for you to consider.<br><br>Why? <br><br>We will then give you feedback, identifying answers that have the most risk from an ethical and social point of view. Risk can be in terms of possible harm to your users, to your own values and therefore your company's foundation and team, or to your overall public reputation and relations.<br><br>These areas do not cover all of the possible issues you may have. If you want to go through all of the issues, use our full-blown privacy, ethical and social impact assessment questionnaire: ";
+  document.getElementById('modal-text').innerHTML = "You've mapped your product in relation to your ethical values. In this third stage, we challenge how you understand those values.<br><br>Why? <br><br>The values that are important to you ripple through the product's functionality, so if any are shaky, it will shake the whole stack. We question each value and your answers will determine whether your product has a rock-solid or shaky ethical foundation. We will identify the answers that have the most risk from an ethical and social point of view. Risk can be in terms of possible harm to your users, to your own values and therefore your company's foundation and team, or to your overall public reputation and relations.<br><br>These areas do not cover all of the possible issues you may have. If you want to go through all of the issues, use our full-blown privacy, ethical and social impact assessment questionnaire: ";
   var newlink = document.createElement('a');
   	var linkname = document.createTextNode("VIRT-EU PESIA");
   	newlink.appendChild(linkname);
@@ -1044,6 +1028,9 @@ function expose_the_stack(){
 
   for (var i = 0; i < canvas.getObjects().length; i++) {
     if (canvas.getObjects()[i].type == "line") {
+    	canvas.getObjects()[i].set({
+        	opacity: .1
+    	});   //fade all items in the canvas except for value questions
       if (theProduct[canvas.getObjects()[i].to]) {
         theProduct[canvas.getObjects()[i].to].push(canvas.getObjects()[i].from)
       } else {
@@ -1056,7 +1043,7 @@ function expose_the_stack(){
     for (var e = 0; e < stack[i].getObjects().length; e++) {
       if (stack[i].getObjects()[e].type == "group") {
         stack[i].getObjects()[e].animate({
-          opacity: 0.5
+          opacity: 0.1 //fade all items in the canvas except for value questions
         },{
           duration: 250,
           onChange: canvas.renderAll.bind(canvas),
@@ -1089,6 +1076,51 @@ function expose_the_stack(){
   	}
   }
 
+  //fade all items in the canvas except for value questions
+	for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
+		if (canvas.getObjects()[5].getObjects()[i].fill != "#2D9DD7") {
+  			canvas.getObjects()[5].getObjects()[i].animate({
+          		opacity: .1 
+        	},{
+	          duration: 250,
+	          onChange: canvas.renderAll.bind(canvas),
+	          onComplete: function() {
+	            //callback code goes here
+	          }
+        	});
+  		}
+  	}  
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[4].getObjects().length; i++) {
+		canvas.getObjects()[4].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[3].getObjects().length; i++) {
+		canvas.getObjects()[3].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[2].getObjects().length; i++) {
+		canvas.getObjects()[2].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[1].getObjects().length; i++) {
+		canvas.getObjects()[1].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[0].getObjects().length; i++) {
+		canvas.getObjects()[0].getObjects()[i].set({
+			opacity:0.1
+		})
+	}
+
   for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
   	try{
   		if (!canvas.getObjects()[5].getObjects()[i].selected) {
@@ -1113,6 +1145,81 @@ function review_issues() {
 	for (var i = 0; i < problem_values.length; i++) {
 		document.getElementById(problem_values[i]).style.display = "none";
 	}
+////////////make everything visible
+//////////////////////////////////
+  for (var i = 0; i < stack.length; i++) {
+    for (var e = 0; e < stack[i].getObjects().length; e++) {
+      if (stack[i].getObjects()[e].type == "group") {
+        stack[i].getObjects()[e].animate({
+          opacity: 0.65 //fade all items in the canvas except for value questions
+        },{
+          duration: 250,
+          onChange: canvas.renderAll.bind(canvas),
+          onComplete: function() {
+            //callback code goes here
+          }
+        });
+      }
+    }
+  }
+  for (var i = 0; i < canvas.getObjects().length; i++) {
+    if (canvas.getObjects()[i].type == "line") {
+      canvas.getObjects()[i].set({
+          opacity: .65
+      });   //fade all items in the canvas except for value questions
+      if (theProduct[canvas.getObjects()[i].to]) {
+        theProduct[canvas.getObjects()[i].to].push(canvas.getObjects()[i].from)
+      } else {
+        theProduct[canvas.getObjects()[i].to] = [canvas.getObjects()[i].from]
+      }
+    }
+  }
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[5].getObjects().length; i++) {
+    if (canvas.getObjects()[5].getObjects()[i].fill != "#2D9DD7") {
+        canvas.getObjects()[5].getObjects()[i].animate({
+              opacity: .65
+          },{
+            duration: 250,
+            onChange: canvas.renderAll.bind(canvas),
+            onComplete: function() {
+              //callback code goes here
+            }
+          });
+      }
+    }  
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[4].getObjects().length; i++) {
+    canvas.getObjects()[4].getObjects()[i].set({
+      opacity:0.65
+    })
+  }
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[3].getObjects().length; i++) {
+    canvas.getObjects()[3].getObjects()[i].set({
+      opacity:0.65
+    })
+  }
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[2].getObjects().length; i++) {
+    canvas.getObjects()[2].getObjects()[i].set({
+      opacity:0.65
+    })
+  }
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[1].getObjects().length; i++) {
+    canvas.getObjects()[1].getObjects()[i].set({
+      opacity:0.65
+    })
+  }
+  //fade all items in the canvas except for value questions
+  for (var i = 0; i < canvas.getObjects()[0].getObjects().length; i++) {
+    canvas.getObjects()[0].getObjects()[i].set({
+      opacity:0.65
+    })
+  }
+///////////make everything visible
+//////////////////////////////////
 
 	document.getElementById('the-description').innerHTML = "Congratulations!"
 	$("#review_margin").css("margin-bottom","185px");
