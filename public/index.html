@@ -183,6 +183,30 @@
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCiKndy9w8XDU3IYWu1U2VcZKrHJA0ymMc",
+    authDomain: "ethicalstack.firebaseapp.com",
+    databaseURL: "https://ethicalstack.firebaseio.com",
+    projectId: "ethicalstack",
+    storageBucket: "ethicalstack.appspot.com",
+    messagingSenderId: "395768768391",
+    appId: "1:395768768391:web:18bbc5507291c08e2c9522",
+    measurementId: "G-F12VNREG9D"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 </body>
 
 </html>
