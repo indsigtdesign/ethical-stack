@@ -410,7 +410,7 @@ function load_pop_up(top, left) {
     });
 
     
-    input = new fabric.Textbox('Tap and Type', {
+    input = new fabric.Textbox('Click and Type', {
       originX: 'center',
       originY: 'center',
       left: left,
@@ -783,6 +783,8 @@ function spread_the_stack() {
   document.getElementById('the-description').innerHTML = "Click your values and drag to create a line to relevant elements in your stack."
   document.getElementById('modal-text').innerHTML = "In this second stage, demonstrate where your values are connected to your product.<br><br>Why? <br><br>If every technical link in the product “works”, it's still important to ask what it is working towards. What are the ethical values that you hold dear, that ground your product? Put another way: would you quit or feel as though you’ve failed your mission if these ethical values were compromised? <br>Show where you are putting them into action by connecting them into your stack."
   $('#modal').modal('show')
+  document.getElementById("modal-text").scrollTop = 0;
+
   document.getElementById("map").classList.remove("pulse");
   document.getElementById("create").classList.add("disabled");
   document.getElementById("map").removeEventListener("click", spread_the_stack)
@@ -1023,7 +1025,7 @@ function expose_the_stack(){
     document.getElementById('modal-text').appendChild(newlink);
 
   $('#modal').modal('show')
-
+  document.getElementById("modal-text").scrollTop = 0;
   state++;
 
   for (var i = 0; i < canvas.getObjects().length; i++) {
@@ -1141,6 +1143,10 @@ function review_issues() {
 	document.getElementById("expose").classList.add("disabled");
 	document.getElementById("review").classList.remove("pulse");
 	document.getElementById("review").removeEventListener("click", review_issues)
+
+  document.getElementById('modal-header').innerHTML = "REVIEW CHALLENGES" 
+  document.getElementById('modal-text').innerHTML = "You've laid out all of your product, linked it with your values, and answered challenges about those ethical values. <br>In this final phase, we show you which of your answers were problematic from an ethical point of view and try to help you to understand why. After reviewing these ethical challenges, we hope you will try to solve them by using some of the supporting tools (at right).<br><br> Scroll all the way down to print the page directly and access more information."
+  document.getElementById("modal-text").scrollTop = 0;
 
 	for (var i = 0; i < problem_values.length; i++) {
 		document.getElementById(problem_values[i]).style.display = "none";
