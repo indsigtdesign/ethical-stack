@@ -1585,6 +1585,13 @@ function showGroup(group) {
 		}
 	}
 }
+
 function printFunction() {
   window.print();
+}
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	console.log("hello")
+	$("#begin_btn").addClass("disabled")
+	$("#begin_btn").text("mobile devices is not supported")
 }
