@@ -926,3 +926,17 @@ a .fa-times:hover{
     font-weight: 100;
     font-family: tablet-gothic;
   }
+
+@media (max-width: 767px) {
+  .text-md-center {
+    text-align: center;
+  }
+
+  .offset-15 {
+      margin-left: inherit;
+  }
+
+  .mt-6{
+    margin-top: 2rem !important;
+  }
+}
